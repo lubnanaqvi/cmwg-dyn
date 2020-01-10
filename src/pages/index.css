@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+body {
+  margin: 0;
+  font-family: Raleway, sans-serif;
+  color: #383838;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+}
+.cookiefont {
+  font-family: "Cookie", cursive;
+  font-weight: lighter;
+}
+/*slide show*/
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fadeIn {
+  position: relative;
+}
+.fadeIn img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  animation-name: fade;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  width: 90%;
+  margin: auto;
+}
+.fadeIn img:nth-child(1) {
+  animation-delay: 0s;
+}
+.fadeIn img:nth-child(2) {
+  animation-delay: 5s;
+}
+.fadeIn img:nth-child(3) {
+  animation-delay: 10s;
+}
+.fadeIn img:nth-child(4) {
+  animation-delay: 15s;
+}
+.fadeIn img:nth-child(5) {
+  animation-delay: 20s;
+}
+@media only screen and (max-width: 750px) {
+  .fadeIn img {
+    position: static;
+    width: 100%;
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* For catching CSS bugs */
+.debug {
+  line-height: 1.5em;
+}

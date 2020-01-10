@@ -1,0 +1,58 @@
+[
+  {
+    "id": "0",
+    "txt": "Service",
+    "desc": "We serve, honour and seek to be guided by our Creator in all of our actions and activities.",
+    "colr": "#87189d",
+    "efct": "rotate(0deg)"
+  },
+  {
+    "id": "1",
+    "txt": "Support",
+    "desc": " We strive to strengthen and support the voices of Muslim women in our area.",
+    "colr": "#ffc72c",
+    "efct": "rotate(45deg)"
+  },
+  {
+    "id": "2",
+    "txt": "Social Activism",
+    "desc": "We speak out on issues affecting Muslim women locally, nationally and internationally.",
+    "colr": "#73aaaf",
+    "efct": "rotate(90deg)"
+  },
+  {
+    "id": "3",
+    "txt": "Empowerment",
+    "desc": "We provide opportunities for women to learn, share and develop communication and leadership skills to become active members of the Muslim and larger communities.",
+    "colr": "#ffc72c",
+    "efct": "rotate(135deg)"
+  },
+  {
+    "id": "4",
+    "txt": "Outreach",
+    "colr": "#73aaaf",
+    "desc": "We constantly strive to build bridges with the larger community, and to partner with other organizations for mutual benefit",
+    "efct": "rotate(180deg)"
+  },
+  {
+    "id": "5",
+    "txt": "Diversity",
+    "desc": "We actively welcome Muslim women of various cultures, ethnic backgrounds and diverse religious expression.",
+    "colr": "#87189d",
+    "efct": "rotate(225deg)"
+  },
+  {
+    "id": "6",
+    "txt": "Democracy",
+    "desc": "We welcome and respect diversity in thought and reach decisions as a group through discussion and democratic means.",
+    "colr": "#87189d",
+    "efct": "rotate(270deg)"
+  },
+  {
+    "id": "7",
+    "txt": "Responsibility",
+    "desc": "We act with integrity and are accountable to our community.",
+    "colr": "#ffc72c",
+    "efct": "rotate(315deg)"
+  }
+]

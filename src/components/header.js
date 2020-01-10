@@ -1,42 +1,34 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
-
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+import styled from "styled-components"
+import logo from "../images/logo.png"
+const Header = () => {
+  const StyledImg = styled.img`
+    padding: 1% 2%;
+    width: 15%;
+    display: inline-block;
+    vertical-align: middle;
+    @media (max-width: 750px) {
+      width: 30%;
+    }
+  `
+  const StyledH1 = styled.h1`
+    padding: 1% 2%;
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 2em;
+    text-align: center;
+    @media (max-width: 750px) {
+      display: none;
+    }
+  `
+  return (
+    <header>
+      <a href="/">
+        <StyledImg src={logo} />
+      </a>
+      <StyledH1 className="cookiefont">Muslim Women making change!</StyledH1>
+    </header>
+  )
 }
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
 export default Header

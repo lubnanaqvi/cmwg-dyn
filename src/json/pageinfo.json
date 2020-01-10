@@ -1,0 +1,56 @@
+[
+  {
+    "link": "/",
+    "pagename": "Home",
+    "heading": "Welcome",
+    "para": "Welcome to the Coalition of Muslim Women of KW’s website! We warmly invite you to explore this site to meet our dynamic and talented members, learn about our vibrant history, explore our exciting programs and Services, and discover how YOU can become actively involved! Salaam!"
+  },
+  {
+    "link": "/programsandservices",
+    "pagename": "Programs & Services",
+    "heading": "Programs & Services",
+    "para": ""
+  },
+  {
+    "link": "/togetheragainstislamophobia",
+    "pagename": "Together Against Islamophobia",
+    "heading": "Together Against Islamophobia",
+    "para": "2-3 lines of intro about this project"
+  },
+  {
+    "link": "/inthenews",
+    "pagename": "CMW in the News",
+    "heading": "CMW in the News",
+    "para": ""
+  },
+  {
+    "link": "/awards",
+    "pagename": "Women Who Inspire Awards",
+    "heading": "CMW Women Who Inspire Awards",
+    "para": ""
+  },
+  {
+    "link": "/publications",
+    "pagename": "Publications & Annual Reports",
+    "heading": "Pulications & Annual Reports",
+    "para": ""
+  },
+  {
+    "link": "/events",
+    "pagename": "Events",
+    "heading": "Events",
+    "para": ""
+  },
+  {
+    "link": "/about",
+    "pagename": "About Us",
+    "heading": "About us",
+    "para": ""
+  },
+  {
+    "link": "/getinvolved",
+    "pagename": "Get Involved",
+    "heading": "Get Involved",
+    "para": ""
+  }
+]

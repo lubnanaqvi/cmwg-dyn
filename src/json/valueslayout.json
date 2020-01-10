@@ -1,0 +1,35 @@
+[
+  {
+    "gridCol": "1",
+    "gridRow": "1"
+  },
+  {
+    "gridCol": "2",
+    "gridRow": "3"
+  },
+  {
+    "gridCol": "3",
+    "gridRow": "4",
+    "sp": "true"
+  },
+  {
+    "gridCol": "4",
+    "gridRow": "2"
+  },
+  {
+    "gridCol": "6",
+    "gridRow": "3"
+  },
+  {
+    "gridCol": "7",
+    "gridRow": "2"
+  },
+  {
+    "gridCol": "8",
+    "gridRow": "3"
+  },
+  {
+    "gridCol": "9",
+    "gridRow": "1"
+  }
+]
