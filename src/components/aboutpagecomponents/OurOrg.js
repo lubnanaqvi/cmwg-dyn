@@ -23,7 +23,7 @@ const OurOrg = () => {
       <OurOrgBtn
         btntext={orgbtn}
         key={i}
-        bgcolor={displayId === i ? "black" : "#73aaaf"}
+        bgcolor={displayId === i ? "black" : "#777"}
         handleClick={e => {
           setDisplayId(i)
         }}
@@ -32,7 +32,6 @@ const OurOrg = () => {
   })
   return (
     <div>
-      <StyledH2 className="cookiefont">Our Organization</StyledH2>
       <StyledDiv>{btnList}</StyledDiv>
       <DisplayArea showId={displayId} />
     </div>

@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import SEO from "../components/seo"
 import Hero from "../components/Hero"
 import TiledDiv from "../components/TiledDiv"
 import OurOrg from "../components/aboutpagecomponents/OurOrg"
@@ -23,6 +24,7 @@ const About = () => {
 
   return (
     <Layout>
+      <SEO title="About Us" />
       <TiledDiv>
         <Hero heroID={7} />
         <StyledGrid>

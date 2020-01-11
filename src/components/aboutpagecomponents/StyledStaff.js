@@ -9,9 +9,10 @@ const StyledStaff = ({ openStaffId, src, details, handleClick }) => {
     min-height: 200px;
     border: solid 1px #aaa;
     grid-template-columns: 40% auto;
-    color: white;
+    color: #ddd;
     &:hover {
       border: solid 1px white;
+      color: white;
       cursor: pointer;
     }
     @media (max-width: 1024px) {

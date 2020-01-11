@@ -11,11 +11,13 @@ import pdf1 from "../pdf/2018awards.pdf"
 import pdf2 from "../pdf/2019awards.pdf"
 import ImageSlideShow from "../components/ImageSlideShow"
 import HeadingAndPara from "../components/HeadingAndPara"
+import TiledDiv from "../components/TiledDiv"
 
 const Awards = () => {
   const imgs = [pic0, pic1, pic2, pic3]
   const booklets = [pdf1, pdf2, pdf2, pdf1]
   const StyledGrid = styled.div`
+    background-color: rgba(255, 255, 255, 0.7);
     display: grid;
     grid-template-columns: auto 250px;
     width: 80%;
@@ -107,20 +109,22 @@ const Awards = () => {
   )
   return (
     <Layout>
-      <SEO title="Events" />
-      <Hero heroID={4} />
-      <StyledGrid>
-        <LeftSection>
-          <StyledIntro>{intro}</StyledIntro>
-          <ImageSlideShow imgArray={imgs} />
-        </LeftSection>
-        <RightSection>
-          <StyledH3 className="cookiefont">
-            Get to know our Award Winners
-          </StyledH3>
-          <BookletListDiv>{booklet_list}</BookletListDiv>
-        </RightSection>
-      </StyledGrid>
+      <SEO title="Awards" />
+      <TiledDiv>
+        <Hero heroID={4} />
+        <StyledGrid>
+          <LeftSection>
+            <StyledIntro>{intro}</StyledIntro>
+            <ImageSlideShow imgArray={imgs} />
+          </LeftSection>
+          <RightSection>
+            <StyledH3 className="cookiefont">
+              Get to know our Award Winners
+            </StyledH3>
+            <BookletListDiv>{booklet_list}</BookletListDiv>
+          </RightSection>
+        </StyledGrid>
+      </TiledDiv>
     </Layout>
   )
 }

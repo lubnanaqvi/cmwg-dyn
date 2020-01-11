@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 const OurOrgBtn = ({ btntext, handleClick, bgcolor }) => {
   const StyledButton = styled.div`
     display: inline-block;
@@ -13,11 +13,11 @@ const OurOrgBtn = ({ btntext, handleClick, bgcolor }) => {
     &:visited,
     &:link,
     &:active {
-      background-color: grey;
+      background-color: #73aaaf;
       cursor: pointer;
     }
-  `;
-  return <StyledButton onClick={handleClick}>{btntext}</StyledButton>;
-};
+  `
+  return <StyledButton onClick={handleClick}>{btntext}</StyledButton>
+}
 
-export default OurOrgBtn;
+export default OurOrgBtn

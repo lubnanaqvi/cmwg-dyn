@@ -1,40 +1,44 @@
 import React from "react"
 import styled from "styled-components"
-const ValueCard = ({ id, txt, desc, openedValue }) => {
-  const StyledDesc = styled.div`
-    box-sizing: border-box;
-    background-color: white;
-    color: black;
-    border: solid 1px black;
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 80%;
-    height: 80%;
-    cursor: pointer;
+import values_array from "../../json/ourvalues.json"
+import HeadingAndPara from "../HeadingAndPara"
+const ValueCard = ({ openedValue, handleClick }) => {
+  const StyledDiv = styled.div`
+    display: ${openedValue === -1 ? "none" : "block"};
     padding: 2%;
-    display: ${openedValue === id ? "block" : "none"};
-  `
-  const BackBtn = styled.span`
-    padding: 1%;
-    background-color: #42275a;
-    color: white;
-    font-weight: normal;
-    &:hover {
-      background-color: black;
-      cursor: pointer;
+    margin: 2% auto;
+    width:70%;
+    border: solid 1px black;
+    text-align center;
+    @media (max-width:750px){
+      width:90%;
     }
   `
+  const StyledBtn = styled.span`
+    background-color: #87189d;
+    border: solid 1px grey;
+    color: white;
+    padding: 2%;
+    display: ${openedValue === -1 ? "none" : "inline-block"};
+    &:hover {
+      cursor: pointer;
+      background-color: black;
+    }
+  `
+  const res =
+    openedValue === -1 ? (
+      ""
+    ) : (
+      <HeadingAndPara
+        h={values_array[openedValue].txt}
+        p={values_array[openedValue].desc}
+      />
+    )
   return (
-    <StyledDesc
-      onClick={() => {
-        openedValue = -1
-      }}
-    >
-      <h2>{txt}</h2>
-      <p>{desc}</p>
-      <BackBtn>Back</BackBtn>
-    </StyledDesc>
+    <StyledDiv onClick={handleClick}>
+      {res}
+      <StyledBtn>Close</StyledBtn>
+    </StyledDiv>
   )
 }
 export default ValueCard
