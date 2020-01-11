@@ -1,26 +1,26 @@
-import React from "react";
-import History from "./History";
-import Strategic from "./Strategic";
-import Directors from "./Directors";
-import Staff from "./Staff";
-import Employment from "./Employment";
-import Partners from "./Partners";
+import React from "react"
+import History from "./History"
+import Strategic from "./Strategic"
+import Directors from "./Directors"
+import Staff from "./Staff"
+import Partners from "./Partners"
+import VMV from "./VMV"
 const DisplayArea = ({ showId }) => {
   switch (showId) {
     case 0:
-      return <History />;
+      return <VMV />
     case 1:
-      return <Strategic />;
+      return <History />
     case 2:
-      return <Directors />;
+      return <Strategic />
     case 3:
-      return <Staff />;
+      return <Directors />
     case 4:
-      return <Employment />;
+      return <Staff />
     case 5:
-      return <Partners />;
+      return <Partners />
     default:
-      return <div>Default</div>;
+      return <div>Default</div>
   }
-};
-export default DisplayArea;
+}
+export default DisplayArea

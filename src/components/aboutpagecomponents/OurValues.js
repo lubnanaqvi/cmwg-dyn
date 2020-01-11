@@ -22,7 +22,11 @@ const OurValues = () => {
     grid-template-rows: repeat(5, 3.5vw);
     @media (max-width: 1024px) {
       grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 50px);
+    }
+    @media (max-width: 750px) {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(11, 70px);
     }
   `
 
