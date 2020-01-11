@@ -10,13 +10,12 @@ const OurValues = () => {
     padding: 0;
     margin: 0;
   `
-  //background-image: linear-gradient(to left bottom, #b29caf, #42275a);
   const StyledGrid = styled.div`
     position: relative;
     display: grid;
     margin: auto;
     padding: 2%;
-    background-image: linear-gradient(to left bottom, #ffb75e, #ed8f03);
+    background-image: linear-gradient(to left bottom, #b29caf, #42275a);
     color: white;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(5, 3.5vw);
