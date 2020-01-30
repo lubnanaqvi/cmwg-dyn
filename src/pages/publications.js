@@ -1,6 +1,7 @@
 import React from "react"
-import Hero from "../components/Hero"
+import Hero from "../components/utils/Hero"
 import Layout from "../components/layout"
+import "./index.css"
 const PublicationsAndReports = () => (
   <Layout>
     <Hero heroID={4} />

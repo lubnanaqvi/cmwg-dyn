@@ -1,7 +1,8 @@
 import React from "react"
 import MainContent from "../components/pscomponents/MainContent"
-import Hero from "../components/Hero"
+import Hero from "../components/utils/Hero"
 import Layout from "../components/layout"
+import "./index.css"
 const ProgramsAndServices = () => (
   <Layout>
     <Hero heroID={1} />

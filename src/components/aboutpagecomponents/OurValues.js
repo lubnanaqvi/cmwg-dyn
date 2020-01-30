@@ -15,7 +15,7 @@ const OurValues = () => {
   const StyledGrid = styled.div`
     position: relative;
     display: grid;
-    margin: auto;
+    margin: 0 auto;
     grid-gap: 1vw;
     color: white;
     grid-template-columns: repeat(8, 9vw);

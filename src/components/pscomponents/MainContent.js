@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import Intro from "./Intro";
-import PandS from "./PandS";
-import TiledDiv from "../TiledDiv";
+import React from "react"
+import styled from "styled-components"
+import Intro from "./Intro"
+import PandS from "./PandS"
+import TiledDiv from "../utils/TiledDiv"
 const MainContent = () => {
   const StyledDiv = styled.div`
     display: grid;
@@ -16,7 +16,7 @@ const MainContent = () => {
     @media (max-width: 750px) {
       grid-template-columns: auto;
     }
-  `;
+  `
   return (
     <TiledDiv>
       <StyledDiv>
@@ -24,6 +24,6 @@ const MainContent = () => {
         <PandS />
       </StyledDiv>
     </TiledDiv>
-  );
-};
-export default MainContent;
+  )
+}
+export default MainContent

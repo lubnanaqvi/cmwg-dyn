@@ -1,5 +1,5 @@
-import React from "react";
-import HeadingAndPara from "../HeadingAndPara";
+import React from "react"
+import HeadingAndPara from "../utils/HeadingAndPara"
 const Mission = () => (
   <HeadingAndPara
     h="Mission"
@@ -10,5 +10,5 @@ and professional growth, and leadership development for Muslim women
 To engage and support Muslim women to actively participate as
 leaders in the Muslim and larger community"
   />
-);
-export default Mission;
+)
+export default Mission

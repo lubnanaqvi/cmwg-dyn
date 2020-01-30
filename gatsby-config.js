@@ -4,9 +4,10 @@ module.exports = {
     description: ``,
     author: `@gatsbyjs`,
   },
-  pathPrefix: `/cmw2020`,
+  pathPrefix: `/cmw2020g`,
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-htaccess`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

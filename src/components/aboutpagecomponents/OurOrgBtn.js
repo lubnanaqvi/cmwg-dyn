@@ -1,11 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-const OurOrgBtn = ({ btntext, handleClick, bgcolor }) => {
+const OurOrgBtn = ({ btntext, handleClick, showGradient }) => {
   const StyledButton = styled.div`
     display: inline-block;
-    background-color: ${bgcolor};
+    background-color: ${showGradient ? "#39755c" : "black"};
+    background-image: ${showGradient ? "linear-gradient(#73aaaf,#204033)" : ""};
     color: white;
-    padding: 2%;
+    padding: 1.5%;
     margin: 1%;
     font-size: 0.9em;
     &:focus,
@@ -13,7 +14,8 @@ const OurOrgBtn = ({ btntext, handleClick, bgcolor }) => {
     &:visited,
     &:link,
     &:active {
-      background-color: #73aaaf;
+      background-image: none;
+      background-color: #777;
       cursor: pointer;
     }
   `

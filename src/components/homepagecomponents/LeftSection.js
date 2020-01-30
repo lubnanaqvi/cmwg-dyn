@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import ImageSlideShow from "../ImageSlideShow"
+import ImageSlideShow from "../utils/ImageSlideShow"
 import Thanks from "./Thanks"
-import HedaingAndPara from "../HeadingAndPara"
+import HedaingAndPara from "../utils/HeadingAndPara"
 import slide1 from "../../images/slideshow1.jpg"
 import slide2 from "../../images/slideshow2.jpg"
 import slide3 from "../../images/slideshow3.jpg"
@@ -12,8 +12,11 @@ const LeftSection = () => {
   const ia = [slide0, slide1, slide2, slide3, slide4]
   const StyledSection = styled.section`
     background-color: rgba(255, 255, 255, 0.7);
-    padding: 1%;
     text-align: center;
+    padding: 1%;
+    @media (max-width: 1024px) and (min-width: 750px) {
+      padding-bottom: 70%;
+    }
   `
   const StyledIntro = styled.div`
     display: block;

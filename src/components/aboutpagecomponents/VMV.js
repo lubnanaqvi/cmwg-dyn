@@ -7,6 +7,7 @@ const VMV = () => {
   const InnerGrid = styled.div`
     display: grid;
     grid-template-columns: 40% auto;
+    grid-gap: 3vw;
     @media (max-width: 750px) {
       grid-template-columns: auto;
     }

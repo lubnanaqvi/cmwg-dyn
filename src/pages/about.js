@@ -1,10 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import SEO from "../components/seo"
-import Hero from "../components/Hero"
-import TiledDiv from "../components/TiledDiv"
+import Hero from "../components/utils/Hero"
+import TiledDiv from "../components/utils/TiledDiv"
 import OurOrg from "../components/aboutpagecomponents/OurOrg"
 import Layout from "../components/layout"
+import "./index.css"
 const About = () => {
   const StyledGrid = styled.div`
     background-color: rgba(255, 255, 255, 0.6);

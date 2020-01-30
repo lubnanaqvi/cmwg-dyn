@@ -3,7 +3,8 @@ import History from "./History"
 import Strategic from "./Strategic"
 import Directors from "./Directors"
 import Staff from "./Staff"
-import Partners from "./Partners"
+import Collaborators from "./Collaborators"
+import Contributors from "./Contributors"
 import VMV from "./VMV"
 const DisplayArea = ({ showId }) => {
   switch (showId) {
@@ -18,7 +19,9 @@ const DisplayArea = ({ showId }) => {
     case 4:
       return <Staff />
     case 5:
-      return <Partners />
+      return <Collaborators />
+    case 6:
+      return <Contributors />
     default:
       return <div>Default</div>
   }

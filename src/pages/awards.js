@@ -1,21 +1,24 @@
 import React from "react"
 import styled from "styled-components"
-import Hero from "../components/Hero"
+import Hero from "../components/utils/Hero"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import pic0 from "../images/awardpic16.jpg"
 import pic1 from "../images/awardpic17.jpg"
 import pic2 from "../images/awardpic18.jpg"
 import pic3 from "../images/awardpic19.jpg"
-import pdf1 from "../pdf/2018awards.pdf"
-import pdf2 from "../pdf/2019awards.pdf"
-import ImageSlideShow from "../components/ImageSlideShow"
-import HeadingAndPara from "../components/HeadingAndPara"
-import TiledDiv from "../components/TiledDiv"
+import pdf0 from "../pdf/2019aw.pdf"
+import pdf1 from "../pdf/2018aw.pdf"
+import pdf2 from "../pdf/2017aw.pdf"
+import pdf3 from "../pdf/2016aw.pdf"
+import ImageSlideShow from "../components/utils/ImageSlideShow"
+import HeadingAndPara from "../components/utils/HeadingAndPara"
+import TiledDiv from "../components/utils/TiledDiv"
+import "./index.css"
 
 const Awards = () => {
   const imgs = [pic0, pic1, pic2, pic3]
-  const booklets = [pdf1, pdf2, pdf2, pdf1]
+  const booklets = [pdf0, pdf1, pdf2, pdf3]
   const StyledGrid = styled.div`
     background-color: rgba(255, 255, 255, 0.7);
     display: grid;
@@ -86,17 +89,26 @@ const Awards = () => {
       border: solid 1px white;
       color: white;
     }
+    & > span {
+      font-size: 12pt;
+      margin: 0;
+    }
     @media (max-width: 750px) {
       width: 100px;
       height: 100px;
       margin: 1%;
       padding-top: 5%;
       font-size: 2em;
+      & > span {
+        font-size: 8pt;
+        margin: 0;
+      }
     }
   `
   const booklet_list = booklets.map((b, i) => (
-    <BookletLink href={b} key={i}>
+    <BookletLink href={b} key={i} target="_blank">
       {2019 - i}
+      <br /> <span> award winners</span>
     </BookletLink>
   ))
   const intro = (

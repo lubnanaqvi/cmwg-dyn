@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "./index.css"
 import Layout from "../components/layout"
-import Main from "../components/Main"
+import Main from "../components/homepagecomponents/Main"
 
 import SEO from "../components/seo"
 

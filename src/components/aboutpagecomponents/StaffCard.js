@@ -22,22 +22,33 @@ const StaffCard = ({ pic, openStaffId, details }) => {
     background-image: url(${pic});
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    display: inline-block;
+    vertical-align: top;
     @media (max-width: 1024px) {
-      width: 50vw;
+      width: 45vw;
       height: 50vh;
-      background-size: contain;
+    }
+    @media (max-width: 750px) {
+      display: block;
+      width: 95%;
+      margin: auto;
     }
   `
   const StyledDetails = styled.div`
-    width: 75%;
+    width: 48%;
     background-color: white;
     color: black;
-    position: relative;
-    top: -10%;
-    left: 15%;
-    padding: 3%;
+    padding: 1%;
+    display: inline-block;
+    vertical-align: top;
     @media (max-width: 1024px) {
-      top: -2%;
+      width: 35vw;
+    }
+    @media (max-width: 750px) {
+      display: block;
+      width: 95%;
+      margin: auto;
     }
   `
   const StyledSpan = styled.span`
@@ -58,13 +69,16 @@ const StaffCard = ({ pic, openStaffId, details }) => {
       cursor: pointer;
     }
   `
+  const desc_paras = desc
+    .split("\n")
+    .map((p, i) => <StyledPara key={i}>{p}</StyledPara>)
   return (
     <StyledDiv onClick={() => (openStaffId = -1)}>
       <StyledPic src={pic} />
       <StyledDetails>
         <h2>{name}</h2>
         <StyledSpan>{title}</StyledSpan>
-        <StyledPara>{desc}</StyledPara>
+        {desc_paras}
         <BackBtn>Back</BackBtn>
       </StyledDetails>
     </StyledDiv>

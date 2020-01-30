@@ -1,5 +1,5 @@
-import React from "react";
-import HeadingAndPara from "../HeadingAndPara";
+import React from "react"
+import HeadingAndPara from "../utils/HeadingAndPara"
 const History = () => {
   return (
     <HeadingAndPara
@@ -24,6 +24,6 @@ const History = () => {
         mission, values and code of conduct regardless of their religious or
         non-religious affiliation"
     />
-  );
-};
-export default History;
+  )
+}
+export default History

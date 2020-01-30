@@ -1,29 +1,27 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import OurOrgBtn from "./OurOrgBtn"
-import DisplayArea from "./DIsplayArea"
+import DisplayArea from "./DisplayArea"
 const OurOrg = () => {
   const [displayId, setDisplayId] = useState(0)
-  const StyledH2 = styled.h2`
-    font-size: 2.5em;
-    padding: 0;
-    margin: 0;
+  const StyledDiv = styled.div`
+    margin-bottom: 1%;
   `
-  const StyledDiv = styled.div``
   const org_array = [
     "Vision, Mission, Values",
     "History",
-    "Strategic Direction",
+    "Strategic Directions",
     "Board of Directors",
     "Staff",
-    "Partners & Collaborators",
+    "Collaborators",
+    "Contributors",
   ]
   const btnList = org_array.map((orgbtn, i) => {
     return (
       <OurOrgBtn
         btntext={orgbtn}
         key={i}
-        bgcolor={displayId === i ? "black" : "#777"}
+        showGradient={displayId !== i}
         handleClick={e => {
           setDisplayId(i)
         }}

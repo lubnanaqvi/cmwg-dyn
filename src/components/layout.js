@@ -8,10 +8,14 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import NavToggle from "../components/NavToggle"
-import Nav from "../components/Nav"
-import Header from "./header"
-import Footer from "./Footer"
+import NavToggle from "./layoutcomponents/NavToggle"
+import Nav from "./layoutcomponents/Nav"
+import Header from "./layoutcomponents/Header"
+import Footer from "./layoutcomponents/Footer"
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]')
+}
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
