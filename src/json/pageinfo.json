@@ -6,9 +6,15 @@
     "para": "Welcome to the Coalition of Muslim Women of KW’s website! We warmly invite you to explore this site to meet our dynamic and talented members, learn about our vibrant history, explore our exciting programs and Services, and discover how YOU can become actively involved! Salaam!"
   },
   {
-    "link": "/programsandservices",
-    "pagename": "Programs & Services",
-    "heading": "Programs & Services",
+    "link": "/programs",
+    "pagename": "Programs",
+    "heading": "Programs",
+    "para": ""
+  },
+  {
+    "link": "/services",
+    "pagename": "Services",
+    "heading": "Services",
     "para": ""
   },
   {

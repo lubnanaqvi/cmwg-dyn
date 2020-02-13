@@ -72,9 +72,7 @@ const Footer = () => {
     <StyledFooter>
       {iconsList}
       <StyledDiv>
-        <StyledLink to="/programsandservices">
-          Programs &amp; Services
-        </StyledLink>
+        <StyledLink to="/programs">Programs &amp; Services</StyledLink>
         <StyledLink to="/events">Events</StyledLink>
         <StyledLink to="/about">About</StyledLink>
         <StyledLink to="/getinvolved">Get Involved</StyledLink>
@@ -84,6 +82,7 @@ const Footer = () => {
         <StyledAnchor
           href="https://goo.gl/maps/zR9yTA4Qci5Nr9LE9"
           target="_blank"
+          rel="noopener"
         >
           65 Hanson Avenue, Kitchener, Ontario &#8599;
         </StyledAnchor>

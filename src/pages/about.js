@@ -27,7 +27,7 @@ const About = () => {
     <Layout>
       <SEO title="About Us" />
       <TiledDiv>
-        <Hero heroID={7} />
+        <Hero heroID={8} />
         <StyledGrid>
           <OurOrg />
         </StyledGrid>

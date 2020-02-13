@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
 const NavToggle = ({ isNavOpen, handleClick }) => {
   const StyledButton = styled.div`
@@ -10,7 +10,7 @@ const NavToggle = ({ isNavOpen, handleClick }) => {
     padding: 10px 0;
     text-align: center;
     font-weight: bold;
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 10px;
     z-index: 10;
@@ -25,12 +25,12 @@ const NavToggle = ({ isNavOpen, handleClick }) => {
       top: 0;
       right: 0;
     }
-  `;
+  `
 
   return (
     <StyledButton onClick={handleClick}>
       {isNavOpen ? "Close Menu" : "Menu"}
     </StyledButton>
-  );
-};
-export default NavToggle;
+  )
+}
+export default NavToggle

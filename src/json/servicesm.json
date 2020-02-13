@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "text": "Art and culture programming",
+    "link": "/programs"
+  },
+  {
+    "id": 1,
+    "text": "Leadership training and Skills development",
+    "link": "/programs"
+  },
+  {
+    "id": 2,
+    "text": "Support for victims of hate incidents",
+    "link": "/togetheragainstislamophobia"
+  },
+  {
+    "id": 3,
+    "text": "Support for cases of discrimination / human rights violations",
+    "link": "/programs"
+  },
+  {
+    "id": 4,
+    "text": "Volunteer opportunities",
+    "link": "/getinvolved"
+  },
+  {
+    "id": 5,
+    "text": "Networking opportunities",
+    "link": "/events"
+  }
+]

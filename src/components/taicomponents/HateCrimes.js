@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import StyledHeading from "../utils/StyledHeading"
 const HateCrimes = ({ id }) => {
   const StyledDiv = styled.div`
     display: grid;
@@ -13,11 +14,6 @@ const HateCrimes = ({ id }) => {
     background-color: #a0d39d;
     padding: 2%;
   `
-  const StyledH2 = styled.h2`
-    font-size: 2.5em;
-    margin: 0;
-    padding: 0;
-  `
   const StyledLink = styled.a`
     display: inline-block;
     color: #531d35;
@@ -29,9 +25,7 @@ const HateCrimes = ({ id }) => {
   `
   return (
     <div id={id}>
-      <StyledH2 className="cookiefont">
-        Reporting Hate Crimes / Incidents
-      </StyledH2>
+      <StyledHeading t="Reporting Hate Crimes / Incidents" />
       <StyledDiv>
         <p>
           CMW is actively looking for resources to build its capacity to address

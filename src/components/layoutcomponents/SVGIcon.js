@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
 const SVGIcon = ({ link, iconName, paths }) => {
   const svgPath = paths.map((p, i) => {
-    return <path d={p} key={i} />;
-  });
+    return <path d={p} key={i} />
+  })
   const StyledIcon = styled.svg`
     display: inline-block;
     width: 1.5em;
@@ -19,12 +19,12 @@ const SVGIcon = ({ link, iconName, paths }) => {
     @media (max-width: 750px) {
       padding: 3%;
     }
-  `;
+  `
   const StyledLink = styled.a`
     color: inherit;
-  `;
+  `
   return (
-    <StyledLink href={link} target="_blank">
+    <StyledLink href={link} target="_blank" rel="noopener">
       <StyledIcon className={`icon icon-${iconName}`}>
         <use xlinkHref={`#icon-${iconName}`} />
         <defs>
@@ -35,6 +35,6 @@ const SVGIcon = ({ link, iconName, paths }) => {
         </defs>
       </StyledIcon>
     </StyledLink>
-  );
-};
-export default SVGIcon;
+  )
+}
+export default SVGIcon

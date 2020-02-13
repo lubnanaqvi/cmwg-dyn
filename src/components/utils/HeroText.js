@@ -1,6 +1,7 @@
 import React from "react"
 import pageinfo from "../../json/pageinfo.json"
 import styled from "styled-components"
+import StyledHeading from "./StyledHeading.js"
 
 const HeroText = ({ heroTextNumber }) => {
   const StyledDiv = styled.div`
@@ -12,16 +13,11 @@ const HeroText = ({ heroTextNumber }) => {
       width: 90%;
     }
   `
-  const StyledH2 = styled.h2`
-    font-size: 2.5em;
-    padding: 0;
-    margin: 0;
-  `
   const h = pageinfo[heroTextNumber].heading
   const p = pageinfo[heroTextNumber].para
   return (
     <StyledDiv>
-      <StyledH2 className="cookiefont">{h}</StyledH2>
+      <StyledHeading t={h} />
       <p>{p}</p>
     </StyledDiv>
   )

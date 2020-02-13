@@ -1,12 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import tai from "../../images/tai.png"
+import StyledHeading from "../utils/StyledHeading"
 const History = ({ id }) => {
-  const StyledH2 = styled.h2`
-    font-size: 2.5em;
-    margin: 0;
-    padding: 0;
-  `
   const StyledPara = styled.p`
     margin: 0 0 3% 0;
     padding: 0;
@@ -41,7 +37,7 @@ const History = ({ id }) => {
   `
   return (
     <div id={id}>
-      <StyledH2 className="cookiefont">History &amp; Background</StyledH2>
+      <StyledHeading t="History &amp; Background" />
       <StyledPara>
         The Coalition of Muslim Women’s ‘Together Against Islamophobia’ project
         was previously known as ‘Hate Crimes and Incidents’ (HCI) project which

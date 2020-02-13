@@ -1,12 +1,9 @@
 import React from "react"
 import styled from "styled-components"
+import StyledHeading from "../utils/StyledHeading"
 const QMosqueShooting = ({ id }) => {
   const StyledDiv = styled.div``
-  const StyledH2 = styled.h2`
-    font-size: 2.5em;
-    margin: 0;
-    padding: 0;
-  `
+
   const StyledLink = styled.a`
     display: inline-block;
     color: #531d35;
@@ -26,7 +23,7 @@ const QMosqueShooting = ({ id }) => {
   `
   return (
     <StyledDiv id={id}>
-      <StyledH2 className="cookiefont">Quebec Mosque Shooting</StyledH2>
+      <StyledHeading t="Quebec Mosque Shooting" />
       <StyledPara>
         January 29th 2017 was a horrific day for Canada when an Islamophobe
         entered the Quebec City’s mosque and gunned down six innocent human

@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import "./index.css"
 const InTheNews = () => (
   <Layout>
-    <Hero heroID={3} />
+    <Hero heroID={4} />
     <h2>CMW in the News</h2>
   </Layout>
 )

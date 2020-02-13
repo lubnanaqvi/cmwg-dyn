@@ -1,22 +1,26 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
 const Intro = () => {
   const StyledDiv = styled.div`
     background-color: rgba(255, 255, 255, 0.6);
     padding: 5%;
-  `;
+  `
   const StyledAnchor = styled.a`
     margin: 1%;
     font-weight: bold;
-  `;
+  `
   return (
     <StyledDiv>
       <p>
         CMW offers regular and one time / special programs and services for
         Muslim women, as well as to the larger community in Waterloo Region.
         Most of our programming takes place at
-        <StyledAnchor href="https://www.facswaterloo.org/familycentre">
+        <StyledAnchor
+          href="https://www.facswaterloo.org/familycentre"
+          target="_blank"
+          rel="noopener"
+        >
           The Family Centre
         </StyledAnchor>
         where our office is also located. We develop programming based on the
@@ -32,6 +36,6 @@ const Intro = () => {
         whose support enables us to offer our innovative programming.
       </p>
     </StyledDiv>
-  );
-};
-export default Intro;
+  )
+}
+export default Intro

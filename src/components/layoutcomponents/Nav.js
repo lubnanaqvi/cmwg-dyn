@@ -5,7 +5,7 @@ import pages from "../../json/pageinfo.json"
 
 const Nav = ({ showMe }) => {
   const StyledNav = styled.nav`
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     z-index: 9;
@@ -13,7 +13,7 @@ const Nav = ({ showMe }) => {
   `
   const Styledul = styled.ul`
     list-style-type: none;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 100px 0 0 0;
     margin: 0;
     height: 80vh;

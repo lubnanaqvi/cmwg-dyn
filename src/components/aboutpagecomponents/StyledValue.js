@@ -5,12 +5,7 @@ const StyledValue = ({ valueObj, handleClick }) => {
   const { id, txt } = valueObj
   const StyledDiv = styled.div`
     text-align: center;
-    background-image: linear-gradient(
-      to left bottom,
-      #ffc72c,
-      #aa6c39,
-      #3e2815
-    );
+    background-image: linear-gradient(to left bottom, #c33764, #1d2671);
     border-radius: 50%;
     position: relative;
     transition: all 0.5s linear;

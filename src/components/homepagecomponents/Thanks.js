@@ -1,12 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import Funders from "./Funders";
+import React from "react"
+import styled from "styled-components"
+import Funders from "./Funders"
+import StyledHeading from "../utils/StyledHeading"
 const Thanks = () => {
-  const StyledH2 = styled.h2`
-    font-size: 2.5em;
-    padding: 0;
-    margin: 0;
-  `;
   const StyledDiv = styled.div`
     position: relative;
     top: 400px;
@@ -23,12 +19,12 @@ const Thanks = () => {
       width: 95%;
       margin: auto;
     }
-  `;
+  `
   return (
     <StyledDiv>
-      <StyledH2 className="cookiefont">Note of thanks for our funders</StyledH2>
+      <StyledHeading t="Note of thanks for our funders" />
       <Funders />
     </StyledDiv>
-  );
-};
-export default Thanks;
+  )
+}
+export default Thanks

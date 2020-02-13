@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import logo from "../../images/logo.png"
+import { Link } from "gatsby"
 const Header = () => {
   const StyledImg = styled.img`
     padding: 1% 2%;
@@ -24,9 +25,9 @@ const Header = () => {
   `
   return (
     <header>
-      <a href="/">
+      <Link to="/">
         <StyledImg src={logo} alt="Coalition of Muslim Women Logo" />
-      </a>
+      </Link>
       <StyledH1 className="cookiefont">Muslim Women making change!</StyledH1>
     </header>
   )

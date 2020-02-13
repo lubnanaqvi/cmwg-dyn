@@ -19,7 +19,7 @@ const TogetherAgainstIslamophobia = () => {
     <Layout>
       <SEO title="Together Against Islamophobia" />
       <TiledDiv>
-        <Hero heroID={2} />
+        <Hero heroID={3} />
         <StyledDiv>
           <NavPanel />
         </StyledDiv>

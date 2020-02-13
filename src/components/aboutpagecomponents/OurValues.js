@@ -4,13 +4,10 @@ import values_array from "../../json/ourvalues.json"
 import StyledValue from "./StyledValue"
 import values_layout from "../../json/valueslayout.json"
 import ValueCard from "./ValueCard"
+import StyledHeading from "../utils/StyledHeading"
 const OurValues = () => {
   const [openedValue, setOpenedValue] = useState(-1)
-  const StyledH2 = styled.h2`
-    font-size: 2.5em;
-    padding: 0;
-    margin: 0;
-  `
+
   //background-image: linear-gradient(to left bottom, #b29caf, #42275a);
   const StyledGrid = styled.div`
     position: relative;
@@ -47,7 +44,7 @@ const OurValues = () => {
 
   return (
     <div>
-      <StyledH2 className="cookiefont">Values</StyledH2>
+      <StyledHeading t="Values" />
       <StyledGrid>{valuesList}</StyledGrid>
       <ValueCard openedValue={openedValue} handleClick={handleClick} />
     </div>

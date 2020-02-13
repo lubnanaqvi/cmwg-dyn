@@ -1,29 +1,16 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import StyledStaff from "./StyledStaff"
-import staff0 from "../../images/staff0.jpg"
-import staff1 from "../../images/staff1.jpg"
-import staff2 from "../../images/staff2.jpg"
-import staff3 from "../../images/staff3.jpeg"
-import staff4 from "../../images/dir1.jpg"
-import staff5 from "../../images/staff0.jpg"
-import staff6 from "../../images/dir1.jpg"
-import staff7 from "../../images/dir0.jpg"
-import staff8 from "../../images/staff0.jpg"
+import staff0 from "../../images/fauzia.jpg"
+import staff1 from "../../images/dir3.jpg"
+import staff2 from "../../images/sarah.jpg"
+import staff3 from "../../images/wazhma.jpeg"
+import staff4 from "../../images/wisam.jpg"
+import staff5 from "../../images/asha.jpg"
 import staffdetails from "../../json/staff.json"
 const Staff = () => {
   const [openedStaff, setOpenedStaff] = useState(-1)
-  const staff_pics = [
-    staff0,
-    staff1,
-    staff2,
-    staff3,
-    staff4,
-    staff5,
-    staff6,
-    staff7,
-    staff8,
-  ]
+  const staff_pics = [staff0, staff1, staff2, staff3, staff4, staff5]
   const StyledDiv = styled.div`
     position: relative;
     width: 95%;

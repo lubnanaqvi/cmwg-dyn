@@ -52,7 +52,7 @@ const Awards = () => {
     }
   `
   const RightSection = styled.div`
-    background-image: linear-gradient(to left, #02aab0, #00cdac);
+    background-image: linear-gradient(to right bottom, teal, #73aaaf);
     padding-bottom: 3%;
   `
   const BookletListDiv = styled.div`
@@ -77,7 +77,7 @@ const Awards = () => {
     width: 150px;
     height: 150px;
     margin: auto;
-    color: #eee;
+    color: #ccc;
     border: solid 1px #ccc;
     cursor: pointer;
     text-decoration: none;
@@ -106,14 +106,14 @@ const Awards = () => {
     }
   `
   const booklet_list = booklets.map((b, i) => (
-    <BookletLink href={b} key={i} target="_blank">
+    <BookletLink href={b} key={i} target="_blank" rel="noopener">
       {2019 - i}
       <br /> <span> award winners</span>
     </BookletLink>
   ))
   const intro = (
     <HeadingAndPara
-      h="CMW Women Who Inspire Awards"
+      h=""
       p="Every March, in commemoration of International Women’s Day, the Coalition of Muslim Women of KW recognizes Muslim women leaders and change makers in our community by honouring them at the CMW Women Who Inspire Awards Recognition Dinner. In addition, “Friend of CMW” award is presented to an individual, group or organization to recognize their contributions towards building the organization and their support and mentorship for Muslim women in general. CMW long term volunteers are also recognized at 5 and 10 years marks. 
   Call for nominations is issued generally 4 months in advance of the Gala date, seeking nominations in the categories of Inspiring Leadership,, Community Service, Professional Excellence, Advocacy/Activism, Artistic Accomplishments and Outstanding Youth. An awards committee reviews the nominations in early January and select the winners. Please watch this website for news concerning our next CMW Women Who Inspire Awards Recognition Dinner! We hope that you will join us at this gala event!
   Do read about our esteemed award winners in “Get to know our Award Winners” section."
@@ -123,7 +123,7 @@ const Awards = () => {
     <Layout>
       <SEO title="Awards" />
       <TiledDiv>
-        <Hero heroID={4} />
+        <Hero heroID={5} />
         <StyledGrid>
           <LeftSection>
             <StyledIntro>{intro}</StyledIntro>

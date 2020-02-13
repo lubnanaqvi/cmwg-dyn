@@ -4,13 +4,10 @@ import FunderLogo from "./FunderLogo"
 import flogo1 from "../../images/funderlogo3.jpg"
 import flogo2 from "../../images/funderlogo6.png"
 import flogo3 from "../../images/funderlogo7.png"
+import StyledHeading from "../utils/StyledHeading"
 const Funders = ({ id }) => {
   const StyledDiv = styled.div``
-  const StyledH2 = styled.h2`
-    font-size: 2.5em;
-    margin: 0;
-    padding: 0;
-  `
+
   const funders_array = [
     { img: flogo1, expand: "30%", alt: "Inspirit Logo" },
     { img: flogo2, expand: "20%", alt: "KW Community Foundation Logo" },
@@ -21,7 +18,7 @@ const Funders = ({ id }) => {
   ))
   return (
     <StyledDiv id={id}>
-      <StyledH2 className="cookiefont">Funders</StyledH2>
+      <StyledHeading t="Funders" />
       {fundersList}
     </StyledDiv>
   )

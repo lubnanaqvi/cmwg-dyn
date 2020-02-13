@@ -1,0 +1,32 @@
+[
+  {
+    "id": "0",
+    "name": "Employment Opportunities",
+    "link": ""
+  },
+  {
+    "id": "1",
+    "name": "Make a donation",
+    "link": ""
+  },
+  {
+    "id": "2",
+    "name": "Attend an Event",
+    "link": "/events"
+  },
+  {
+    "id": "3",
+    "name": "Volunteer your time",
+    "link": "mailto:cmw.info@cmw-kw.org?subject=Volunteer"
+  },
+  {
+    "id": "4",
+    "name": "Book a speaker",
+    "link": "mailto:cmw.info@cmw-kw.org?subject=Book a speaker"
+  },
+  {
+    "id": "5",
+    "name": "Join our Mailing List",
+    "link": "mailto:cmw.info@cmw-kw.org?subject=Subscribe to mailing list"
+  }
+]
