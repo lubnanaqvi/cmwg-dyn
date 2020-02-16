@@ -15,7 +15,7 @@ const OurOrgBtn = ({ btntext, handleClick, showGradient }) => {
     &:link,
     &:active {
       background-image: none;
-      background-color: #777;
+      background-color: #444;
       cursor: pointer;
     }
   `

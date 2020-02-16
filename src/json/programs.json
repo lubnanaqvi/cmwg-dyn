@@ -1,0 +1,37 @@
+[
+  {
+    "id": 0,
+    "name": "Arts Programming",
+    "link": "/programs/artsprogramming"
+  },
+  {
+    "id": 1,
+    "name": " Community Outreach Events",
+    "link": "/programs/communityoutreach"
+  },
+  {
+    "id": 2,
+    "name": " HUQUQ",
+    "link": "/programs/huquq"
+  },
+  {
+    "id": 3,
+    "name": " Leadership Training",
+    "link": "/programs/leadershiptraining"
+  },
+  {
+    "id": 4,
+    "name": "  Speakers Bureau",
+    "link": "/programs/speakersbureau"
+  },
+  {
+    "id": 5,
+    "name": " Tea and Tales with Muslim Women",
+    "link": "/programs/teantales"
+  },
+  {
+    "id": 6,
+    "name": " Youth Programming",
+    "link": "/programs/youthprogramming"
+  }
+]

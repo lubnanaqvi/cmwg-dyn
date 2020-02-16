@@ -33,9 +33,11 @@ const GetInvolved = () => {
     padding: 2%;
     @media (max-width: 1024px) {
       grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, 200px);
     }
     @media (max-width: 750px) {
       grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 200px);
     }
   `
   const pics = [

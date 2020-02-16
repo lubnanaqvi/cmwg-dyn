@@ -9,24 +9,24 @@ import TiledDiv from "../components/utils/TiledDiv"
 import sm from "../json/servicesm.json"
 import sg from "../json/servicesg.json"
 import "./index.css"
+import Styled80Div from "../components/utils/Styled80Div"
 const Services = () => {
-  const StyledDiv = styled.div`
-    width: 80%;
-    margin: auto;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 2%;
-  `
   const StyledLink = styled(Link)`
     color: inherit;
     text-decoration: none;
     display: block;
+    width: 80%;
+    @media (max-width: 750px) {
+      width: 95%;
+    }
   `
   const StyledGhost = styled.div`
     padding: 1%;
     display: inline-block;
-    border: solid 1px transparent;
+    border: solid 1px #ccc;
+    margin: 1%;
     &:hover {
-      border-color: black;
+      border-color: #383838;
     }
   `
   const servicesMlist = sm.map((s, i) => (
@@ -44,12 +44,12 @@ const Services = () => {
       <SEO title="Services" />
       <TiledDiv>
         <Hero heroID={2} />
-        <StyledDiv>
+        <Styled80Div>
           <StyledHeading t="For Muslim Women" />
           {servicesMlist}
           <StyledHeading t="For General Public" />
           {servicesGlist}
-        </StyledDiv>
+        </Styled80Div>
       </TiledDiv>
     </Layout>
   )

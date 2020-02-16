@@ -7,14 +7,9 @@ const StyledStaff = ({ openStaffId, src, details, handleClick }) => {
     margin: 2% auto;
     display: grid;
     min-height: 200px;
-    border: solid 1px #aaa;
+    border: solid 1px white;
     grid-template-columns: 40% auto;
-    color: #ddd;
-    &:hover {
-      border: solid 1px white;
-      color: white;
-      cursor: pointer;
-    }
+    color: white;
     @media (max-width: 1024px) {
       grid-template-columns: 50% auto;
     }
@@ -40,18 +35,37 @@ const StyledStaff = ({ openStaffId, src, details, handleClick }) => {
       font-size: 0.8em;
     }
   `
+  const StyledDetailsBtn = styled.span`
+    text-decoration: underline;
+    display: block;
+    width: 50%;
+    margin: 2%;
+    padding: 2% 0;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      font-style: italic;
+    }
+    @media (max-width: 1024px) {
+      font-size: 0.8em;
+    }
+  `
   return (
-    <StyledDiv onClick={handleClick} id={details.id}>
-      <StyledPic onClick={handleClick} id={details.id} />
-      <StyledName onClick={handleClick} id={details.id}>
+    <StyledDiv>
+      <StyledPic />
+      <StyledName>
         <StyledH3 className="cookiefont">{details.name}</StyledH3>
         <StyledTitle>{details.title}</StyledTitle>
+        <StyledDetailsBtn onClick={handleClick} id={details.id}>
+          Details
+        </StyledDetailsBtn>
       </StyledName>
       <StaffCard
         pic={src}
         openStaffId={openStaffId}
         details={details}
         id={details.id}
+        clickHandler={handleClick}
       />
     </StyledDiv>
   )

@@ -29,7 +29,7 @@ const NavToggle = ({ isNavOpen, handleClick }) => {
 
   return (
     <StyledButton onClick={handleClick}>
-      {isNavOpen ? "Close Menu" : "Menu"}
+      {isNavOpen ? "Close" : "Menu"}
     </StyledButton>
   )
 }

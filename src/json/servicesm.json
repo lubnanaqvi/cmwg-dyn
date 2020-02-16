@@ -2,12 +2,12 @@
   {
     "id": 0,
     "text": "Art and culture programming",
-    "link": "/programs"
+    "link": "/programs/artsprogramming"
   },
   {
     "id": 1,
     "text": "Leadership training and Skills development",
-    "link": "/programs"
+    "link": "/programs/leadershiptraining"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
   {
     "id": 3,
     "text": "Support for cases of discrimination / human rights violations",
-    "link": "/programs"
+    "link": "/programs/huquq"
   },
   {
     "id": 4,

@@ -14,14 +14,13 @@ const Nav = ({ showMe }) => {
   const Styledul = styled.ul`
     list-style-type: none;
     background-color: rgba(0, 0, 0, 0.9);
-    padding: 100px 0 0 0;
+    padding: 15% 0 0 0;
     margin: 0;
     height: 80vh;
     width: 20vw;
     @media (max-width: 1024px) {
       width: 50vw;
       height: 100vh;
-      padding-top: 10vh;
     }
     @media (max-width: 750px) {
       width: 100vw;

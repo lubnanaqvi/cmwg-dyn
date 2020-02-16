@@ -25,7 +25,7 @@ const Donation = ({ clickHandler, openid, myid }) => {
   const CloseBtn = styled.div`
     width: 100px;
     margin: 3% auto;
-    background-image: linear-gradient(#73aaaf, #204033);
+    background-color: #451559;
     color: white;
     padding: 1%;
     text-align: center;
