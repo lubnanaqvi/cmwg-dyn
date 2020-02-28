@@ -5,7 +5,7 @@ import DisplayArea from "./DisplayArea"
 const OurOrg = () => {
   const [displayId, setDisplayId] = useState(0)
   const StyledDiv = styled.div`
-    margin-bottom: 1%;
+    text-align: center;
   `
   const org_array = [
     "Vision, Mission, Values",

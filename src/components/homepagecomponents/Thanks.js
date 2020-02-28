@@ -22,7 +22,7 @@ const Thanks = () => {
   `
   return (
     <StyledDiv>
-      <StyledHeading t="Note of thanks for our funders" />
+      <StyledHeading t="A heartfelt thank you to our funders" />
       <Funders />
     </StyledDiv>
   )

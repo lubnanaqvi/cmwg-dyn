@@ -8,7 +8,20 @@ import TiledDiv from "../../components/utils/TiledDiv"
 import Styled80Div from "../../components/utils/Styled80Div"
 import NavPanel from "../../components/programpagecomponents/NavPanel"
 import programpages from "../../json/programs.json"
+
 const Youthprogramming = () => {
+  const StyledImg = styled.img`
+    float: right;
+    width: 20%;
+    max-width: 500px;
+    margin: 1%;
+    @media (max-width: 750px) {
+      float: none;
+      display: block;
+      width: 70%;
+      margin: auto;
+    }
+  `
   const StyledPara = styled.p`
     line-height: 1.4em;
   `
@@ -20,6 +33,10 @@ const Youthprogramming = () => {
         <Styled80Div>
           <NavPanel items={programpages} />
           <StyledHeading t="Youth Programming" />
+          <StyledImg
+            src={require("../../images/youthprogramming.jpg")}
+            alt="Youth Programming event photo"
+          />
           <StyledPara>
             The Safe Spaces Initiative aims to help young Muslims realize their
             potential by empowering them through providing a comfortable space

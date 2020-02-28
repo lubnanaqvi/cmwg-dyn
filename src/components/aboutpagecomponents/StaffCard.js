@@ -19,6 +19,7 @@ const StaffCard = ({ pic, openStaffId, details, clickHandler }) => {
     display: ${openStaffId === id ? "block" : "none"};
   `
   const StyledPic = styled.div`
+    margin-top: ${parseInt(id) > 3 ? "40%" : "0"};
     width: 30%;
     height: 30%;
     background-image: url(${pic});
@@ -31,10 +32,15 @@ const StaffCard = ({ pic, openStaffId, details, clickHandler }) => {
       display: block;
       height: 10%;
       width: 95%;
-      margin: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 750px) {
+      margin-top: ${parseInt(id) > 3 ? 15 * parseInt(id) + "vh" : "0"};
     }
   `
   const StyledDetails = styled.div`
+    margin-top: ${parseInt(id) > 3 ? "40%" : "0"};
     width: 58%;
     padding: 1%;
     display: inline-block;

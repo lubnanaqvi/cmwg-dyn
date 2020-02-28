@@ -36,8 +36,8 @@ const Strategic = () => {
     }
   `
   const StyledIcon = styled.img`
-    width: 5vh;
-    height: 5vh;
+    width: 30px;
+    height: 30px;
     margin: 1vh 2vw;
     display: inline-block;
     vertical-align: middle;
@@ -67,8 +67,8 @@ const Strategic = () => {
     font-weight: bold;
   `
   const dir_arrows = st.map((s, i) => (
-    <StyledDiv>
-      <StyledArrow key={i}>
+    <StyledDiv key={i}>
+      <StyledArrow>
         <StyledIcon src={icon[i]} alt="" />
         <StyledH4>{s}</StyledH4>
       </StyledArrow>

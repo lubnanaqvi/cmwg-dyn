@@ -45,6 +45,8 @@ body {
   animation-duration: 25s;
   animation-iteration-count: infinite;
   width: 90%;
+  max-width: 604px;
+  max-height: 400px;
   margin: auto;
 }
 .fadeIn img:nth-child(1) {

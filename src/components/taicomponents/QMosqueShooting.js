@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import StyledHeading from "../utils/StyledHeading"
+import pdf from "../../pdf/quebec.pdf"
 const QMosqueShooting = ({ id }) => {
   const StyledDiv = styled.div``
 
@@ -45,7 +46,7 @@ const QMosqueShooting = ({ id }) => {
       </StyledPara>
       <StyledPara>
         See our full report on Waterloo Region’s response to the shooting{" "}
-        <StyledLink href="">here.</StyledLink>
+        <StyledLink href={pdf}>here.</StyledLink>
       </StyledPara>
     </StyledDiv>
   )

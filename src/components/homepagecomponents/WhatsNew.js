@@ -4,7 +4,7 @@ import whatsnew from "../../json/whatsnew.json"
 import StylishButtonLink from "../utils/StylishButtonLink"
 import pic0 from "../../images/whatsnewpic0_t.png"
 import pic1 from "../../images/whatsnewpic1_t.png"
-import pic2 from "../../images/whatsnewpic2_t.png"
+import pic2 from "../../images/whatsnewpic2_t.jpg"
 import pic3 from "../../images/whatsnewpic3_t.png"
 const WhatsNew = () => {
   const picsArray = [pic0, pic1, pic2, pic3]
@@ -14,7 +14,7 @@ const WhatsNew = () => {
     if (w.link[0])
       seemore = (
         <StylishButtonLink
-          isAnchor={w.link[0] === "/"}
+          isAnchor={w.link[0] !== "/"}
           linkto={w.link}
           btntext={w.linktext}
           bgcolor="#ffc72c"

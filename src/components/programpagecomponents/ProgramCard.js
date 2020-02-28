@@ -18,7 +18,10 @@ const ProgramCard = ({ item, clickHandler, openedCard }) => {
     grid-gap: 1vw;
     padding: 1%;
     @media (max-width: 750px) {
-      grid-template-columns: 70px 1fr;
+      grid-template-columns: ${id % 2 === 0 ? "150px 1fr" : "1fr 150px"};
+      grid-template-rows: 50px 50px;
+      padding: 1vh;
+      font-size: 0.8em;
     }
   `
   const StyledPic = styled.div`
@@ -26,18 +29,11 @@ const ProgramCard = ({ item, clickHandler, openedCard }) => {
     background-size: cover;
     grid-column: ${id % 2 === 0 ? "1" : "2"} / span 1;
     grid-row: 1 / span 2;
-    @media (max-width: 750px) {
-      grid-column: 1 / span 1;
-      grid-row: 1 / span 1;
-    }
   `
   const StyledText = styled.div`
     grid-column: ${id % 2 === 0 ? "2" : "1"} / span 1;
     grid-row: 2 / span 1;
-    @media (max-width: 750px) {
-      grid-column: 1 / span 2;
-      grid-row: 2 / span 1;
-    }
+    margin-top: 3%;
   `
   const StyledDate = styled.p`
     font-style: italic;
@@ -45,19 +41,21 @@ const ProgramCard = ({ item, clickHandler, openedCard }) => {
   const StyledTitle = styled.div`
     grid-column: ${id % 2 === 0 ? "2" : "1"} / span 1;
     grid-row: 1 / span 1;
-    @media (max-width: 750px) {
-      grid-column: 2 / span 1;
-      grid-row: 1 / span 1;
-    }
     & > * {
-      margin: 0;
+      margin: 0 1%;
       padding: 0;
     }
   `
-  const ReadMore = styled.span`
+  const ReadMore = styled.p`
     text-decoration: underline;
     cursor: pointer;
     font-style: italic;
+    text-align: right;
+  `
+  const StyledPara = styled.p`
+    @media (max-width: 750px) {
+      display: none;
+    }
   `
   const truncated_text = text.substr(0, 180) + "..."
   return (
@@ -69,7 +67,8 @@ const ProgramCard = ({ item, clickHandler, openedCard }) => {
           <StyledDate>{date}</StyledDate>
         </StyledTitle>
         <StyledText>
-          {truncated_text}
+          <StyledPara>{truncated_text}</StyledPara>
+
           <ReadMore onClick={clickHandler} id={id}>
             Read More
           </ReadMore>

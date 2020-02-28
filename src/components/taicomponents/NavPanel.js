@@ -19,9 +19,12 @@ const NavPanel = () => {
     display: inline-block;
     font-size: 0.9em;
     &:hover {
-      background-color: #531d35;
+      background-color: #444;
       background-image: none;
       cursor: pointer;
+    }
+    @media (max-width: 750px) {
+      margin-bottom: 5%;
     }
   `
   const sec_array = [

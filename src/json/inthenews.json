@@ -16,7 +16,7 @@
         "source": "Cambridge Times"
       }
     ],
-    "pic": "hatecrimes.png"
+    "pic": "news1_t.jpg"
   },
   {
     "id": 1,
@@ -47,7 +47,7 @@
         "source": "New Hamburg Independent"
       }
     ],
-    "pic": "bill21.jpg"
+    "pic": "news2_t.jpg"
   },
   {
     "id": 2,
@@ -58,7 +58,7 @@
         "source": "The Record"
       }
     ],
-    "pic": "womenmarch.jpg"
+    "pic": "news3_t.jpg"
   },
   {
     "id": 3,
@@ -69,7 +69,7 @@
         "source": "The Record"
       }
     ],
-    "pic": "tasteoframadan.jpg"
+    "pic": "news4_t.jpg"
   },
   {
     "id": 4,
@@ -92,7 +92,7 @@
         "source": "Kitchener Today - KW Oktoberfest Women of the year award"
       }
     ],
-    "pic": "quote.svg"
+    "pic": "news5_t.jpg"
   },
   {
     "id": 5,
@@ -103,7 +103,7 @@
         "source": "There is no hierarchy of painful events, and loss of life has no hierarchy"
       }
     ],
-    "pic": "newspaper.svg"
+    "pic": "fauzia.jpeg"
   },
   {
     "id": 6,
@@ -122,7 +122,7 @@
         "source": "Kitchener Today"
       }
     ],
-    "pic": "mosque.png"
+    "pic": "news7_t.jpg"
   },
   {
     "id": 7,
@@ -137,7 +137,7 @@
         "source": "Muslim Link"
       }
     ],
-    "pic": "announcement.svg"
+    "pic": "news8_t.jpg"
   },
   {
     "id": 8,
@@ -152,6 +152,6 @@
         "source": "Kitchener Today"
       }
     ],
-    "pic": "vigil.png"
+    "pic": "news9_t.png"
   }
 ]

@@ -4,10 +4,16 @@ module.exports = {
     description: ``,
     author: `@gatsbyjs`,
   },
-  pathPrefix: `/cmw2020g`,
+  pathPrefix: `/cmw\-kw\.org`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-htaccess`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-109448584-2",
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

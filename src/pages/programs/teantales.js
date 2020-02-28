@@ -9,18 +9,12 @@ import Styled80Div from "../../components/utils/Styled80Div"
 import NavPanel from "../../components/programpagecomponents/NavPanel"
 import programpages from "../../json/programs.json"
 const TeaNTales = () => {
-  const img_arr = [
-    "awardpic16.jpg",
-    "oktoberfest.jpg",
-    "slideshow0.jpg",
-    "slideshow1.jpg",
-    "awardpic19.jpg",
-  ]
+  const img_arr = ["tea1.jpg", "tea5.jpg", "tea2.jpg", "tea6.jpg", "tea4.jpg"]
   const StyledPara = styled.p`
     line-height: 1.4em;
   `
   const StyledDiv = styled.div`
-    width: 85%;
+    width: 75%;
     display: inline-block;
     vertical-align: top;
     margin: 1%;
@@ -30,7 +24,7 @@ const TeaNTales = () => {
     }
   `
   const StyledImgStrip = styled.div`
-    width: 10%;
+    width: 15%;
     display: inline-block;
     vertical-align: top;
     @media (max-width: 750px) {
@@ -41,7 +35,7 @@ const TeaNTales = () => {
   const StyledImg = styled.img`
     width: 100%;
     @media (max-width: 750px) {
-      width: 17%;
+      width: 30%;
       display: inline-block;
       margin: 1%;
     }

@@ -72,7 +72,7 @@ const Footer = () => {
     <StyledFooter>
       {iconsList}
       <StyledDiv>
-        <StyledLink to="/programs">Programs &amp; Services</StyledLink>
+        <StyledLink to="/programs">Programs</StyledLink>
         <StyledLink to="/events">Events</StyledLink>
         <StyledLink to="/about">About</StyledLink>
         <StyledLink to="/getinvolved">Get Involved</StyledLink>

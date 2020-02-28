@@ -5,8 +5,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import StyledSmallHeading from "../components/utils/StyledSmallHeading"
 import TiledDiv from "../components/utils/TiledDiv"
-import rep1 from "../pdf/2017ar.pdf"
+import rep3 from "../pdf/2017ar.pdf"
 import rep2 from "../pdf/2018ar.pdf"
+import rep1 from "../pdf/2019ar.pdf"
 import islamophobia from "../pdf/islamophobia.pdf"
 import quebec from "../pdf/quebec.pdf"
 import hatecrimes from "../pdf/hatecrimes.pdf"
@@ -21,6 +22,7 @@ import pic5 from "../images/grassroots.png"
 import pic6 from "../images/muslimah.jpg"
 import arpic17 from "../images/ar2017.png"
 import arpic18 from "../images/ar2018.png"
+import arpic19 from "../images/ar2019.png"
 import "./index.css"
 const PublicationsAndReports = () => {
   const StyledDiv = styled.div`
@@ -46,7 +48,7 @@ const PublicationsAndReports = () => {
     text-decoration: none;
     margin: 5%;
     padding: 1%;
-    border: solid 2px #ccc;
+    border: solid 1px #ccc;
     color: #eee;
     text-align: center;
     transition: border-color 0.2s ease-in;
@@ -87,12 +89,16 @@ const PublicationsAndReports = () => {
           <StyledSmallHeading t="Annual Reports" />
           <StyledGrid>
             <StyledLink href={rep1} target="_blank" rel="noopener">
-              <StyledImg src={arpic17} alt="" />
-              Annual Report for the Year 2017
+              <StyledImg src={arpic19} alt="" />
+              Annual Report for the Year 2019
             </StyledLink>
             <StyledLink href={rep2} target="_blank" rel="noopener">
               <StyledImg src={arpic18} alt="" />
               Annual Report for the Year 2018
+            </StyledLink>
+            <StyledLink href={rep3} target="_blank" rel="noopener">
+              <StyledImg src={arpic17} alt="" />
+              Annual Report for the Year 2017
             </StyledLink>
           </StyledGrid>
           <StyledSmallHeading t="Publications" />

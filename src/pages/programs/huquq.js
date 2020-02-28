@@ -16,6 +16,7 @@ const Huquq = () => {
   const StyledImg = styled.img`
     float: right;
     width: 20%;
+    max-width: 500px;
     margin: 1%;
     @media (max-width: 750px) {
       float: none;
@@ -37,7 +38,7 @@ const Huquq = () => {
           <NavPanel items={programpages} />
           <StyledHeading t="Huquq ~ Muslim Women’s Human Rights Education and Awareness Project" />
           <StyledImg
-            src={require("../../images/whatsnewpic1.png")}
+            src={require("../../images/huquq.png")}
             alt="Huquq Imagery"
           />
           {paraList}

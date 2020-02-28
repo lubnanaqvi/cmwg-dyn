@@ -7,6 +7,7 @@ const FunderLogo = ({ pic, expand, alt }) => {
     width: ${expand};
     margin: 5%;
     vertical-align: middle;
+    max-width: ${(650 * parseInt(expand)) / 100}px;
   `
   return <StyledImg src={pic} alt={alt} />
 }

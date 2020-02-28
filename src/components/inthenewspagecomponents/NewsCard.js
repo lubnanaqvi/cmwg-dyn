@@ -23,19 +23,26 @@ const NewsCard = ({ newsitem }) => {
     }
   `
   const StyledImg = styled.img`
-    width: 10%;
+    width: 120px;
     display: inline-block;
     vertical-align: top;
     margin: 1%;
+    @media (max-width: 750px) {
+      display: block;
+      margin: auto;
+    }
   `
   const StyledDiv = styled.div`
     display: inline-block;
     vertical-align: top;
     width: 80%;
     margin: 1%;
+    @media (max-width: 750px) {
+      width: 100%;
+    }
   `
   const linksList = links.map((l, i) => (
-    <StyledAnchor href={l.href} key={i}>
+    <StyledAnchor href={l.href} key={i} target="_blank" rel="noopener">
       {l.source}
     </StyledAnchor>
   ))

@@ -9,6 +9,18 @@ import Styled80Div from "../../components/utils/Styled80Div"
 import NavPanel from "../../components/programpagecomponents/NavPanel"
 import programpages from "../../json/programs.json"
 const SpeakersBureau = () => {
+  const StyledImg = styled.img`
+    float: right;
+    width: 20%;
+    max-width: 500px;
+    margin: 1%;
+    @media (max-width: 750px) {
+      float: none;
+      display: block;
+      width: 70%;
+      margin: auto;
+    }
+  `
   const StyledPara = styled.p`
     line-height: 1.4em;
   `
@@ -18,8 +30,12 @@ const SpeakersBureau = () => {
       <TiledDiv>
         <Hero heroID={1} />
         <Styled80Div>
-          <StyledHeading t="Speaker's Bureau" />
           <NavPanel items={programpages} />
+          <StyledHeading t="Speaker's Bureau" />
+          <StyledImg
+            src={require("../../images/speakers.jpg")}
+            alt="Speakers Bureau Event Photo"
+          />
           <StyledPara>
             The CMW’s Speakers’ Bureau is comprised of a dynamic group of
             eloquent women speakers who, through their community presentations

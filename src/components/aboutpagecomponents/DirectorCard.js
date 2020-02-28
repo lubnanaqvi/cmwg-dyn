@@ -31,8 +31,8 @@ const DirectorCard = ({ dir, openDirID, handleClick, src }) => {
   `
   const StyledCloseBtn = styled.div`
     padding: 1%;
-    border: solid 1px #aaa;
-    color: #999;
+    border: solid 1px #ccc;
+    color: #ccc;
     width: 30%;
     margin: 2% auto 0 auto;
     &:hover {

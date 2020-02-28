@@ -8,7 +8,9 @@ const FunderLogo = ({ pic, expand, alt }) => {
     margin: 5%;
     vertical-align: middle;
     @media (max-width: 750px) {
-      width: 100%;
+      display: block;
+      width: 90%;
+      margin: 3% auto;
     }
   `
   return <StyledImg src={pic} alt={alt} />

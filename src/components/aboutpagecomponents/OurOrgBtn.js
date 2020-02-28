@@ -6,17 +6,18 @@ const OurOrgBtn = ({ btntext, handleClick, showGradient }) => {
     background-color: ${showGradient ? "#39755c" : "black"};
     background-image: ${showGradient ? "linear-gradient(#73aaaf,#204033)" : ""};
     color: white;
-    padding: 1.5%;
-    margin: 1%;
+    margin: 0 1% 1% 0;
+    padding: 1%;
     font-size: 0.9em;
     &:focus,
     &:hover,
-    &:visited,
-    &:link,
     &:active {
       background-image: none;
       background-color: #444;
       cursor: pointer;
+    }
+    @media (max-width: 750px) {
+      margin-bottom: 5%;
     }
   `
   return <StyledButton onClick={handleClick}>{btntext}</StyledButton>

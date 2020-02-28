@@ -27,14 +27,12 @@ const Nav = ({ showMe }) => {
     }
   `
   const Styledli = styled.li`
-    padding: 5% 3%;
+    padding: 4% 3%;
     width: 90%;
     margin: auto;
     transition: 0.5s linear;
     &:focus,
     &:hover,
-    &:visited,
-    &:link,
     &:active {
       border-bottom: solid 1px white;
     }
