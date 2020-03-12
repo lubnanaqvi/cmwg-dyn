@@ -2,13 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import whatsnew from "../../json/whatsnew.json"
 import StylishButtonLink from "../utils/StylishButtonLink"
-import pic0 from "../../images/whatsnewpic0_t.png"
-import pic1 from "../../images/whatsnewpic1_t.png"
-import pic2 from "../../images/whatsnewpic2_t.jpg"
-import pic3 from "../../images/whatsnewpic3_t.png"
-const WhatsNew = () => {
-  const picsArray = [pic0, pic1, pic2, pic3]
 
+const WhatsNew = () => {
   const wnlist = whatsnew.map((w, i) => {
     let seemore = ""
     if (w.link[0])
@@ -69,7 +64,7 @@ const WhatsNew = () => {
       <StyledWNItem key={i}>
         <StyledH3>{w.heading}</StyledH3>
         <StyledPicDiv>
-          <StyledPic src={picsArray[i]} alt="" />
+          <StyledPic src={require(`../../images/${w.pic}`)} alt="" />
         </StyledPicDiv>
 
         <StyledInnerDiv>

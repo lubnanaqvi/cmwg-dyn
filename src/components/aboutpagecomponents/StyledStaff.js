@@ -36,15 +36,17 @@ const StyledStaff = ({ openStaffId, src, details, handleClick }) => {
     }
   `
   const StyledDetailsBtn = styled.span`
-    text-decoration: underline;
+    border: solid 1px #ccc;
     display: block;
-    width: 50%;
-    margin: 2%;
-    padding: 2% 0;
+    width: 80%;
+    margin-top: 2%;
+    padding: 2%;
     text-align: center;
     cursor: pointer;
+    font-size: 0.8em;
+    transition: border-color 1s linear;
     &:hover {
-      font-style: italic;
+      border-color: white;
     }
     @media (max-width: 1024px) {
       font-size: 0.8em;
@@ -57,7 +59,7 @@ const StyledStaff = ({ openStaffId, src, details, handleClick }) => {
         <StyledH3 className="cookiefont">{details.name}</StyledH3>
         <StyledTitle>{details.title}</StyledTitle>
         <StyledDetailsBtn onClick={handleClick} id={details.id}>
-          Details
+          Bio &amp; Contact Information
         </StyledDetailsBtn>
       </StyledName>
       <StaffCard

@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import StyledSmallHeading from "../utils/StyledSmallHeading"
 const EventCard = ({ event }) => {
-  const { name, details, ww, link, pic } = event
+  const { cardId, name, details, ww, link, pic } = event
   const StyledCard = styled.div`
     background-image: linear-gradient(#383838, #434343);
     color: white;
@@ -73,7 +73,7 @@ const EventCard = ({ event }) => {
   `
   const d = details.split("\n").map((p, i) => <p key={i}>{p}</p>)
   return (
-    <StyledCard>
+    <StyledCard id={cardId}>
       <StyledSmallHeading t={name} />
       <StyledDiv>
         <StyledPic />

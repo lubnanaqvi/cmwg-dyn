@@ -6,7 +6,7 @@ body {
   color: #383838;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: white;
+  background-color: #383838;
 }
 .cookiefont {
   font-family: "Cookie", cursive;

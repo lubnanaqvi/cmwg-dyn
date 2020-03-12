@@ -5,7 +5,8 @@
     "ww": " March 26th The Family Centre 10:00am - 12:30pm",
     "details": "The Huquq Community Forum will be held on March 26th at The Family Centre from 10 am -12:30 pm. The forum will bring together Muslim women, community members, partners, and other relevant stakeholders to hear about the project outcomes and lessons learned.  The forum will also provide opportunities for attendees to learn about Muslim women in an attempt to address stereotypes and misconceptions that are prevalent in the society and form the base for the bias and prejudice against Muslim women which often results in acts of discrimination and hate towards Muslim women. The community forum will further increase understanding and awareness about the discrimination faced by Muslim women and promote harmony and understanding of Muslim women among attendees.\nCMW will present the final report and share the lessons learned from the project through different trainings for Muslim women/community and service providers. It will help us to gather recommendations from the community members and the community organizations who were part of the project.",
     "link": "mailto:wazhma.frogh@cmw-kw.org",
-    "pic": "huquqevent.png"
+    "pic": "huquqevent.png",
+    "cardId": "huquqforum"
   },
   {
     "id": 1,
@@ -13,6 +14,7 @@
     "ww": "April 16th at RIM Park",
     "details": "CMW’s 10th Anniversary Gala and Awards Night will be a celebration of Muslim Women Making Change! in Waterloo Region through advocacy, activism, dialogue and bridge building. It will be an opportunity to reminisce with friends and colleagues, reflect on CMW’s incredible journey, recognize and celebrate many accomplished Muslim women in Waterloo Region, and enjoy an incredible feast of international delicacies with a diverse crowd of 450+ people.\nOn April 16th at RIM Park, we will be acknowledging the outstanding women who have made KW a wonderful place to live through their leadership, community service, activism, volunteerism, professional excellence and artistic accomplishments. Five and Ten Year Service Awards will be presented to CMW’s dedicated volunteers.\nTickets: General $35;  CMW Members and Volunteers $20\nCommunity tables $350;  Corporation table $500\nChildren 8 years or over are welcomed at the event with their own tickets ($20 each)",
     "link": "http://cmw10thanniversaryandawardsgala.eventbrite.ca/",
-    "pic": "awards2020.jpg"
+    "pic": "awards2020.jpg",
+    "cardId": "gala"
   }
 ]

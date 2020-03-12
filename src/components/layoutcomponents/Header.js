@@ -3,6 +3,9 @@ import styled from "styled-components"
 import logo from "../../images/logo.png"
 import { Link } from "gatsby"
 const Header = () => {
+  const StyledHeader = styled.header`
+    background-color: white;
+  `
   const StyledImg = styled.img`
     padding: 1% 2%;
     width: 15%;
@@ -24,12 +27,12 @@ const Header = () => {
     }
   `
   return (
-    <header>
+    <StyledHeader>
       <Link to="/">
         <StyledImg src={logo} alt="Coalition of Muslim Women Logo" />
       </Link>
       <StyledH1 className="cookiefont">Muslim Women making change!</StyledH1>
-    </header>
+    </StyledHeader>
   )
 }
 export default Header

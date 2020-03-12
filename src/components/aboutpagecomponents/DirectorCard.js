@@ -13,11 +13,15 @@ const DirectorCard = ({ dir, openDirID, handleClick, src }) => {
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
     cursor: pointer;
     padding: 2%;
     display: ${openDirID === id ? "grid" : "none"};
     grid-template-columns: 120px auto;
     grid-template-rows: 150px auto;
+    @media (max-width: 750px) {
+      padding-top: ${id * 100 + "px"};
+    }
   `
   const StyledPic = styled.img`
     width: 100px;
@@ -34,10 +38,18 @@ const DirectorCard = ({ dir, openDirID, handleClick, src }) => {
     border: solid 1px #ccc;
     color: #ccc;
     width: 30%;
-    margin: 2% auto 0 auto;
+    margin: 2% auto 2% auto;
+    text-align: center;
     &:hover {
       border-color: white;
       color: white;
+    }
+    @media (pointer: coarse) {
+      color: white;
+      border-color: white;
+    }
+    @media (max-width: 750px) {
+      width: 70%;
     }
   `
   return (
