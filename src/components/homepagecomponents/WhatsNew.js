@@ -6,7 +6,7 @@ import StylishButtonLink from "../utils/StylishButtonLink"
 const WhatsNew = () => {
   const wnlist = whatsnew.map((w, i) => {
     let seemore = ""
-    if (w.link[0])
+    if (w.link && w.link[0])
       seemore = (
         <StylishButtonLink
           isAnchor={w.link[0] !== "/"}
@@ -57,16 +57,19 @@ const WhatsNew = () => {
       margin: 3%;
       border-bottom: solid 1px black;
     `
-    const truncated_description = w.desc.substr(0, 100) + "..."
+    const truncated_description =
+      w.desc.length > 100 ? w.desc.substr(0, 100) + "..." : w.desc
     const parsed_desc = truncated_description.split("\n")
     const desc_with_newlines = parsed_desc.map((d, i) => <p key={i}>{d}</p>)
     return (
       <StyledWNItem key={i}>
         <StyledH3>{w.heading}</StyledH3>
         <StyledPicDiv>
-          <StyledPic src={require(`../../images/${w.pic}`)} alt="" />
+          <StyledPic
+            src={w.pic ? require(`../../images/${w.pic}`) : ""}
+            alt=""
+          />
         </StyledPicDiv>
-
         <StyledInnerDiv>
           <StyledPara>{desc_with_newlines}</StyledPara>
           {seemore}
