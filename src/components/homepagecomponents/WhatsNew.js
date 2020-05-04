@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import whatsnew from "../../json/whatsnew.json"
 import StylishButtonLink from "../utils/StylishButtonLink"
@@ -77,6 +78,36 @@ const WhatsNew = () => {
       </StyledWNItem>
     )
   })
-  return <div>{wnlist}</div>
+  return (
+    <div>
+      {wnlist}
+      <StaticQuery
+        query={graphql`
+          {
+            allContentfulWhatsNew {
+              edges {
+                node {
+                  heading
+                  description {
+                    description
+                  }
+                  link
+                  image {
+                    file {
+                      url
+                    }
+                  }
+                }
+              }
+            }
+          }
+        `}
+        render={data => {
+          console.log(data)
+          return ""
+        }}
+      ></StaticQuery>
+    </div>
+  )
 }
 export default WhatsNew
