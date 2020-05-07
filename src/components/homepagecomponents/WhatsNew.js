@@ -58,40 +58,24 @@ const WhatsNew = () => {
       margin: 3%;
       border-bottom: solid 1px black;
     `
-    const truncated_description =
-      w.desc.length > 100 ? w.desc.substr(0, 100) + "..." : w.desc
-    const parsed_desc = truncated_description.split("\n")
-    const desc_with_newlines = parsed_desc.map((d, i) => <p key={i}>{d}</p>)
+    // const truncated_description =
+    //   w.desc.length > 100 ? w.desc.substr(0, 100) + "..." : w.desc
+    // const parsed_desc = truncated_description.split("\n")
+    // const desc_with_newlines = parsed_desc.map((d, i) => <p key={i}>{d}</p>)
     return (
-      <StyledWNItem key={i}>
-        <StyledH3>{w.heading}</StyledH3>
-        <StyledPicDiv>
-          <StyledPic
-            src={w.pic ? require(`../../images/${w.pic}`) : ""}
-            alt=""
-          />
-        </StyledPicDiv>
-        <StyledInnerDiv>
-          <StyledPara>{desc_with_newlines}</StyledPara>
-          {seemore}
-        </StyledInnerDiv>
-      </StyledWNItem>
-    )
-  })
-  return (
-    <div>
-      {wnlist}
       <StaticQuery
+        key={i}
         query={graphql`
           {
             allContentfulWhatsNew {
               edges {
                 node {
                   heading
+                  link
                   description {
                     description
+                    id
                   }
-                  link
                   image {
                     file {
                       url
@@ -103,11 +87,41 @@ const WhatsNew = () => {
           }
         `}
         render={data => {
-          console.log(data)
-          return ""
+          const myNode = data.allContentfulWhatsNew.edges[i].node
+          const dscrp = myNode.description.description
+          const t_dscrp =
+            dscrp.length > 100 ? dscrp.substr(0, 100) + "..." : dscrp
+          const p_dscrp = t_dscrp.split("\n")
+          const dscrp_with_newlines = p_dscrp.map((d, i) => <p key={i}>{d}</p>)
+          return (
+            <StyledWNItem>
+              <StyledH3>
+                {data.allContentfulWhatsNew.edges[i].node.heading}
+              </StyledH3>
+              <StyledPicDiv>
+                <StyledPic src={myNode.image.file.url || ""} alt="" />
+              </StyledPicDiv>
+              <StyledInnerDiv>
+                <StyledPara>{dscrp_with_newlines}</StyledPara>
+                {myNode.link && myNode.link[0] ? (
+                  <StylishButtonLink
+                    isAnchor={w.link[0] !== "/"}
+                    linkto={w.link}
+                    btntext={w.linktext}
+                    bgcolor="#ffc72c"
+                    txtcolor="black"
+                    pad="3%"
+                  />
+                ) : (
+                  ""
+                )}
+              </StyledInnerDiv>
+            </StyledWNItem>
+          )
         }}
-      ></StaticQuery>
-    </div>
-  )
+      />
+    )
+  })
+  return <div>{wnlist}</div>
 }
 export default WhatsNew

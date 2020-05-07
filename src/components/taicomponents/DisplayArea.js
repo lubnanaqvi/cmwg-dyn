@@ -10,7 +10,6 @@ import Funders from "./Funders"
 import Partners from "./Partners"
 
 const DisplayArea = ({ showId }) => {
-  console.log(showId)
   switch (showId) {
     case "0":
       return <History />

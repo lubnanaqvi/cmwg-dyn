@@ -7,7 +7,6 @@ import Collaborators from "./Collaborators"
 import Contributors from "./Contributors"
 import VMV from "./VMV"
 const DisplayArea = ({ showId }) => {
-  console.log("")
   switch (showId) {
     case 0:
       return <VMV />
