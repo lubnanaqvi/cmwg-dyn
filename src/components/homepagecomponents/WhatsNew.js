@@ -84,9 +84,9 @@ const WhatsNew = () => {
           const seemore =
             myNode.link && myNode.link[0] ? (
               <StylishButtonLink
-                isAnchor={w.link[0] !== "/"}
-                linkto={w.link}
-                btntext={w.linktext}
+                isAnchor={myNode.link[0] !== "/"}
+                linkto={myNode.link}
+                btntext="More"
                 bgcolor="#ffc72c"
                 txtcolor="black"
                 pad="3%"
