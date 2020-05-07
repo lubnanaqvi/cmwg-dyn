@@ -6,18 +6,6 @@ import StylishButtonLink from "../utils/StylishButtonLink"
 
 const WhatsNew = () => {
   const wnlist = whatsnew.map((w, i) => {
-    let seemore = ""
-    if (w.link && w.link[0])
-      seemore = (
-        <StylishButtonLink
-          isAnchor={w.link[0] !== "/"}
-          linkto={w.link}
-          btntext={w.linktext}
-          bgcolor="#ffc72c"
-          txtcolor="black"
-          pad="3%"
-        />
-      )
     const StyledPara = styled.div`
       padding: 0;
       margin: 0 1% 5% 1%;
@@ -93,6 +81,19 @@ const WhatsNew = () => {
             dscrp.length > 100 ? dscrp.substr(0, 100) + "..." : dscrp
           const p_dscrp = t_dscrp.split("\n")
           const dscrp_with_newlines = p_dscrp.map((d, i) => <p key={i}>{d}</p>)
+          const seemore =
+            myNode.link && myNode.link[0] ? (
+              <StylishButtonLink
+                isAnchor={w.link[0] !== "/"}
+                linkto={w.link}
+                btntext={w.linktext}
+                bgcolor="#ffc72c"
+                txtcolor="black"
+                pad="3%"
+              />
+            ) : (
+              ""
+            )
           return (
             <StyledWNItem>
               <StyledH3>
@@ -103,18 +104,7 @@ const WhatsNew = () => {
               </StyledPicDiv>
               <StyledInnerDiv>
                 <StyledPara>{dscrp_with_newlines}</StyledPara>
-                {myNode.link && myNode.link[0] ? (
-                  <StylishButtonLink
-                    isAnchor={w.link[0] !== "/"}
-                    linkto={w.link}
-                    btntext={w.linktext}
-                    bgcolor="#ffc72c"
-                    txtcolor="black"
-                    pad="3%"
-                  />
-                ) : (
-                  ""
-                )}
+                {seemore}
               </StyledInnerDiv>
             </StyledWNItem>
           )
