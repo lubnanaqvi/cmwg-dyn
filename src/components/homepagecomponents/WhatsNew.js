@@ -1,7 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-import whatsnew from "../../json/whatsnew.json"
 import StylishButtonLink from "../utils/StylishButtonLink"
 const StyledPara = styled.div`
   padding: 0;
@@ -44,37 +43,36 @@ const StyledH3 = styled.h3`
   border-bottom: solid 1px black;
 `
 const WhatsNew = () => {
-  const wnlist = whatsnew.map((w, i) => {
-    return (
-      <StaticQuery
-        key={i}
-        query={graphql`
-          {
-            allContentfulWhatsNew {
-              edges {
-                node {
-                  heading
-                  link
-                  description {
-                    description
-                    id
-                  }
-                  itemNumber
-                  image {
-                    file {
-                      url
-                    }
+  return (
+    <StaticQuery
+      query={graphql`
+        {
+          allContentfulWhatsNew {
+            edges {
+              node {
+                heading
+                link
+                description {
+                  description
+                  id
+                }
+                itemNumber
+                image {
+                  file {
+                    url
                   }
                 }
               }
             }
           }
-        `}
-        render={data => {
-          const sortedEdges = data.allContentfulWhatsNew.edges.sort(
-            (a, b) => a.node.itemNumber - b.node.itemNumber
-          )
-          const myNode = sortedEdges[i].node
+        }
+      `}
+      render={data => {
+        const sortedEdges = data.allContentfulWhatsNew.edges.sort(
+          (a, b) => a.node.itemNumber - b.node.itemNumber
+        )
+        const wnlist = sortedEdges.map((s, i) => {
+          const myNode = s.node
           const dscrp = myNode.description.description
           const t_dscrp =
             dscrp.length > 100 ? dscrp.substr(0, 100) + "..." : dscrp
@@ -93,8 +91,9 @@ const WhatsNew = () => {
             ) : (
               ""
             )
+
           return (
-            <StyledWNItem>
+            <StyledWNItem key={i}>
               <StyledH3>
                 {data.allContentfulWhatsNew.edges[i].node.heading}
               </StyledH3>
@@ -107,10 +106,10 @@ const WhatsNew = () => {
               </StyledInnerDiv>
             </StyledWNItem>
           )
-        }}
-      />
-    )
-  })
-  return <div>{wnlist}</div>
+        })
+        return <div>{wnlist} </div>
+      }}
+    />
+  )
 }
 export default WhatsNew
