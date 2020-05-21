@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Employment from "./Employment"
 import Donation from "./Donation"
+import MailingList from "./MailingList"
 import { Link } from "gatsby"
 
 const GetInvolvedPicCard = ({ gi, img, clickHandler, openid }) => {
@@ -72,6 +73,17 @@ const GetInvolvedPicCard = ({ gi, img, clickHandler, openid }) => {
     }
     case "2": {
       displayedName = <StyledLink to="/events">{name}</StyledLink>
+      break
+    }
+    case "5": {
+      details = (
+        <MailingList clickHandler={clickHandler} openid={openid} myid={id} />
+      )
+      displayedName = (
+        <StyledSpan onClick={clickHandler} id={id}>
+          {name}
+        </StyledSpan>
+      )
       break
     }
     default: {

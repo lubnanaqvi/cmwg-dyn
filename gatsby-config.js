@@ -44,6 +44,13 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || "",
       },
     },
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://cmw-kw.us3.list-manage.com/subscribe/post?u=369d18f82f71ec109a4cde044&amp;id=dfce73743b",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

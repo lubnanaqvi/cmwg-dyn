@@ -41,12 +41,12 @@ const GetInvolved = () => {
     }
   `
   const pics = [
+    mailingpic,
     jobspic,
     donatepic,
     eventspic,
     volunteerpic,
     speakerpic,
-    mailingpic,
   ]
   const pic_list = g.map((y, i) => (
     <GetInvolvedPicCard
