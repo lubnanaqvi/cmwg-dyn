@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import StyledSmallHeading from "../utils/StyledSmallHeading"
+import { Link } from "gatsby"
 const EventCard = ({ event }) => {
-  const { cardId, name, details, ww, link, pic } = event
+  const { cardId, name, details, ww, link, pic, linktext } = event
   const StyledCard = styled.div`
     background-image: linear-gradient(#383838, #434343);
     color: white;
@@ -19,7 +20,10 @@ const EventCard = ({ event }) => {
     grid-gap: 1%;
     @media (max-width: 750px) {
       grid-template-columns: auto;
-      grid-template-rows: auto auto auto;
+      grid-template-rows: auto auto auto auto;
+    }
+    a {
+      color: inherit;
     }
   `
   const StyledPic = styled.div`
@@ -54,6 +58,7 @@ const EventCard = ({ event }) => {
     @media (max-width: 750px) {
       grid-column: 1 / span 1;
       grid-row: 3 / span 1;
+      padding-bottom: 1em;
     }
   `
   const StyledCTA = styled.a`
@@ -70,8 +75,26 @@ const EventCard = ({ event }) => {
     &:hover {
       background-color: white;
     }
+    @media (max-width: 750px) {
+      width: 70%;
+      margin: 0 auto;
+    }
   `
-  const d = details.split("\n").map((p, i) => <p key={i}>{p}</p>)
+  const d = details.split("\n").map((p, i) => {
+    let parsed_desc = p
+    //check if it is a link
+    if (p.indexOf("<a") !== -1) {
+      const start = p.indexOf("'>") + 2
+      const stop = p.indexOf("</a>")
+      const aText = p.substring(start, stop)
+      const hrefStart = p.indexOf("href=") + 6
+      const hrefStop = p.indexOf("'>")
+      const aHref = p.substring(hrefStart, hrefStop)
+      const pdf = require(`../../pdf/${aHref}`)
+      parsed_desc = <a href={pdf}>{aText}</a>
+    }
+    return <p key={i}>{parsed_desc}</p>
+  })
   return (
     <StyledCard id={cardId}>
       <StyledSmallHeading t={name} />
@@ -80,7 +103,7 @@ const EventCard = ({ event }) => {
         <StyledWW>{ww}</StyledWW>
         <StyledPara>
           {d}
-          <StyledCTA href={link}>Register</StyledCTA>
+          <StyledCTA href={link}>{linktext || "Register"}</StyledCTA>
         </StyledPara>
       </StyledDiv>
     </StyledCard>

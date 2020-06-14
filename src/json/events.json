@@ -1,20 +1,21 @@
 [
   {
     "id": 0,
-    "name": "HUQUQ Community Forum",
-    "ww": "CANCELLED",
-    "details": "HUQUQ forum scheduled for March 26th has been cancelled. We will be offering one hour of Zoom sharing of the final report in April for small groups. Stay tuned for details.",
-    "link": "mailto:wazhma.frogh@cmw-kw.org",
-    "pic": "huquqevent.png",
-    "cardId": "huquqforum"
+    "name": "Call to Artists: Beauty in Islamic Art",
+    "ww": "Fall 2020",
+    "details": "The Islamic world is renowned for its diverse cultural and artistic traditions. In Islamic culture, Muslims believe that “God is Beautiful and Loves Beauty”. Coalition of Muslim Women of KW is thrilled to continue its partnership with THEMUSEUM for the fourth Annual Islamic Art Exhibition. We are now inviting artists to submit their artwork based on their perception of beauty in Islamic Art. This exhibition will take place this fall.  October is proclaimed as Islamic History Month by Canadian Parliament, and declared as the Islamic Heritage Month by the Parliament of Ontario. This exhibition is supported by a generous grant from Ontario Arts Council to AtiZar artisan.\n<a href='calltoartists.pdf'> Eligibility Guidelines</a>\nSubmission Deadline: July 15, 2020\nFor further details contact: Ati Zar - atizar.artisan@gmail.com ",
+    "link": "https://forms.gle/v2YzUMKeLsLgACGH6",
+    "linktext": "Submission Form",
+    "pic": "calltoartists.png",
+    "cardId": "calltoartists"
   },
   {
     "id": 1,
     "name": "CMW 10th Anniversary Gala and Awards Night",
-    "ww": "June 13th at RIM Park- POSTPONED FROM APRIL 16TH",
-    "details": "CMW’s 10th Anniversary Gala and Awards Night will be a celebration of Muslim Women Making Change! in Waterloo Region through advocacy, activism, dialogue and bridge building. It will be an opportunity to reminisce with friends and colleagues, reflect on CMW’s incredible journey, recognize and celebrate many accomplished Muslim women in Waterloo Region, and enjoy an incredible feast of international delicacies with a diverse crowd of 450+ people.\nOn April 16th at RIM Park, we will be acknowledging the outstanding women who have made KW a wonderful place to live through their leadership, community service, activism, volunteerism, professional excellence and artistic accomplishments. Five and Ten Year Service Awards will be presented to CMW’s dedicated volunteers.\nTickets: General $35;  CMW Members and Volunteers $20\nCommunity tables $350;  Corporation table $500\nChildren 8 years or over are welcomed at the event with their own tickets ($20 each)",
+    "ww": "September 12th at RIM Park- POSTPONED FROM APRIL 16TH",
+    "details": "CMW’s 10th Anniversary Gala and Awards Night will be a celebration of Muslim Women Making Change! in Waterloo Region through advocacy, activism, dialogue and bridge building. It will be an opportunity to reminisce with friends and colleagues, reflect on CMW’s incredible journey, recognize and celebrate many accomplished Muslim women in Waterloo Region, and enjoy an incredible feast of international delicacies with a diverse crowd of 450+ people.\nOn September 12th at RIM Park, we will be acknowledging the outstanding women who have made KW a wonderful place to live through their leadership, community service, activism, volunteerism, professional excellence and artistic accomplishments. Five and Ten Year Service Awards will be presented to CMW’s dedicated volunteers.\nTickets: General $35;  CMW Members and Volunteers $20\nCommunity tables $350;  Corporation table $500\nChildren 8 years or over are welcomed at the event with their own tickets ($20 each)",
     "link": "http://cmw10thanniversaryandawardsgala.eventbrite.ca/",
-    "pic": "awards2020.jpg",
+    "pic": "awards2020events.png",
     "cardId": "gala"
   }
 ]
