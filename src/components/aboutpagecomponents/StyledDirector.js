@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import DirectorCard from "./DirectorCard"
 
-const StyledDirector = ({ openDirID, bod, handleClick, src }) => {
-  const { name, desc, id, title } = bod
+const StyledDirector = ({ openDirID, bod, handleClick }) => {
+  const { name, desc, id, title, pic } = bod
   const StyledDiv = styled.div`
     background-image: linear-gradient(to left, #87189d, #451559);
     width: 90%;
@@ -49,12 +49,10 @@ const StyledDirector = ({ openDirID, bod, handleClick, src }) => {
       grid-row: 2 / span 1;
     }
   `
-  const StyledPic = styled.div`
-    background-image: url(${src});
-    background-repeat: no-repeat;
-    background-size: cover;
+  const StyledPic = styled.img`
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
+    width: 90%;
     margin: 3%;
     @media (max-width: 1024px) {
       grid-column: 1 / span 1;
@@ -72,14 +70,14 @@ const StyledDirector = ({ openDirID, bod, handleClick, src }) => {
       color: #bee6d6;
     }
   `
-  const truncated_desc = desc.substr(0, 180) + "..."
+  const truncated_desc = desc.desc.substr(0, 180) + "..."
   return (
     <StyledDiv>
-      <StyledPic />
       <StyledName>
         <StyledH3 className="cookiefont">{name}</StyledH3>
         <StyledTitle>{title}</StyledTitle>
       </StyledName>
+      <StyledPic src={pic.file.url || ""} alt="" />
       <StyledPara>
         {truncated_desc}{" "}
         <StyledBtn onClick={handleClick} id={id}>
@@ -91,7 +89,6 @@ const StyledDirector = ({ openDirID, bod, handleClick, src }) => {
         dir={bod}
         id={bod.id}
         handleClick={handleClick}
-        src={src}
       />
     </StyledDiv>
   )

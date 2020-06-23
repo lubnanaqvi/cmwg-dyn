@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import StaffCard from "./StaffCard"
-const StyledStaff = ({ openStaffId, src, details, handleClick }) => {
+const StyledStaff = ({ openStaffId, details, handleClick }) => {
   const StyledDiv = styled.div`
     width: 90%;
     margin: 2% auto;
@@ -14,11 +14,9 @@ const StyledStaff = ({ openStaffId, src, details, handleClick }) => {
       grid-template-columns: 50% auto;
     }
   `
-  const StyledPic = styled.div`
-    background-image: url(${src});
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 3%;
+  const StyledPic = styled.img`
+    width: 80%;
+    margin: auto;
   `
   const StyledName = styled.div`
     margin: 2%;
@@ -54,7 +52,7 @@ const StyledStaff = ({ openStaffId, src, details, handleClick }) => {
   `
   return (
     <StyledDiv>
-      <StyledPic />
+      <StyledPic src={details.pic.file.url || ""} alt="" />
       <StyledName>
         <StyledH3 className="cookiefont">{details.name}</StyledH3>
         <StyledTitle>{details.title}</StyledTitle>
@@ -63,7 +61,6 @@ const StyledStaff = ({ openStaffId, src, details, handleClick }) => {
         </StyledDetailsBtn>
       </StyledName>
       <StaffCard
-        pic={src}
         openStaffId={openStaffId}
         details={details}
         id={details.id}

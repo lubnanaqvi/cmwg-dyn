@@ -1,28 +1,9 @@
 import React, { useState } from "react"
+import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import StyledStaff from "./StyledStaff"
-import staff0 from "../../images/fauzia.jpeg"
-import staff1 from "../../images/uzma.jpeg"
-import staff2 from "../../images/sarah.jpg"
-import staff3 from "../../images/wazhma.jpeg"
-import staff4 from "../../images/wisam.jpg"
-import staff5 from "../../images/asha.jpg"
-import staff6 from "../../images/joudi.jpg"
-import staff7 from "../../images/madiha.jpg"
-
-import staffdetails from "../../json/staff.json"
 const Staff = () => {
   const [openedStaff, setOpenedStaff] = useState(-1)
-  const staff_pics = [
-    staff0,
-    staff1,
-    staff2,
-    staff3,
-    staff4,
-    staff5,
-    staff6,
-    staff7,
-  ]
   const StyledDiv = styled.div`
     background-image: linear-gradient(to top left, #73aaaf, teal);
     position: relative;
@@ -37,18 +18,47 @@ const Staff = () => {
       grid-template-columns: 1fr;
     }
   `
-
-  const staff_list = staff_pics.map((s, i) => {
-    return (
-      <StyledStaff
-        src={s}
-        key={i}
-        details={staffdetails[i]}
-        openStaffId={openedStaff}
-        handleClick={e => setOpenedStaff(e.target.id)}
-      />
-    )
-  })
+  const staff_list = (
+    <StaticQuery
+      query={graphql`
+        {
+          allContentfulStaff {
+            edges {
+              node {
+                email
+                phone
+                name
+                contentfulid
+                id
+                title
+                desc {
+                  desc
+                }
+                pic {
+                  file {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+      `}
+      render={data => {
+        const sorted = data.allContentfulStaff.edges.sort(
+          (a, b) => a.node.contentfulid - b.node.contentfulid
+        )
+        return sorted.map((d, i) => (
+          <StyledStaff
+            key={i}
+            details={d.node}
+            openStaffId={openedStaff}
+            handleClick={e => setOpenedStaff(e.target.id)}
+          />
+        ))
+      }}
+    ></StaticQuery>
+  )
   return <StyledDiv>{staff_list}</StyledDiv>
 }
 export default Staff

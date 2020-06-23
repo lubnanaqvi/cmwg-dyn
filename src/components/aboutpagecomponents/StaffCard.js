@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import phoneIcon from "../../images/phones.svg"
 import emailIcon from "../../images/email.svg"
-const StaffCard = ({ pic, openStaffId, details, clickHandler }) => {
-  const { id, name, desc, title, phone, email } = details
+const StaffCard = ({ openStaffId, details, clickHandler }) => {
+  const { id, name, desc, title, phone, email, pic, contentfulid } = details
   const StyledDiv = styled.div`
     box-sizing: border-box;
     background-color: rgba(40, 40, 40, 0.9);
@@ -13,34 +13,29 @@ const StaffCard = ({ pic, openStaffId, details, clickHandler }) => {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     cursor: pointer;
     padding: 2%;
     display: ${openStaffId === id ? "block" : "none"};
   `
-  const StyledPic = styled.div`
-    margin-top: ${parseInt(id) > 3 ? "40%" : "0"};
+  const StyledPic = styled.img`
+    margin-top: ${parseInt(contentfulid) > 3 ? "40%" : "0"};
     width: 30%;
-    height: 30%;
-    background-image: url(${pic});
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
     display: inline-block;
     vertical-align: top;
     @media (max-width: 1024px) {
       display: block;
-      height: 10%;
       width: 95%;
       margin-left: auto;
       margin-right: auto;
     }
     @media (max-width: 750px) {
-      margin-top: ${parseInt(id) > 3 ? 15 * parseInt(id) + "vh" : "0"};
+      margin-top: ${parseInt(contentfulid) > 3
+        ? 15 * parseInt(contentfulid) + "vh"
+        : "0"};
     }
   `
   const StyledDetails = styled.div`
-    margin-top: ${parseInt(id) > 3 ? "40%" : "0"};
+    margin-top: ${parseInt(contentfulid) > 3 ? "40%" : "0"};
     width: 58%;
     padding: 1%;
     display: inline-block;
@@ -109,12 +104,12 @@ const StaffCard = ({ pic, openStaffId, details, clickHandler }) => {
   ) : (
     ""
   )
-  const desc_paras = desc
-    .split("\n")
+  const desc_paras = desc.desc
+    .split("\\n")
     .map((p, i) => <StyledPara key={i}>{p}</StyledPara>)
   return (
     <StyledDiv>
-      <StyledPic src={pic} />
+      <StyledPic src={pic.file.url || ""} alt="" />
       <StyledDetails>
         <h2>{name}</h2>
         <StyledSpan>{title}</StyledSpan>

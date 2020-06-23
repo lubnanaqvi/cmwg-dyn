@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import StyledSmallHeading from "../utils/StyledSmallHeading"
 
-const DirectorCard = ({ dir, openDirID, handleClick, src }) => {
-  const { id, name, title, desc } = dir
+const DirectorCard = ({ dir, openDirID, handleClick }) => {
+  const { id, name, title, desc, pic } = dir
   const StyledDiv = styled.div`
     box-sizing: border-box;
     background-color: rgba(90, 90, 90, 0.95);
@@ -54,13 +54,13 @@ const DirectorCard = ({ dir, openDirID, handleClick, src }) => {
   `
   return (
     <StyledDiv>
-      <StyledPic src={src} alt={name} />
+      <StyledPic src={pic.file.url || ""} alt={name} />
       <div>
         <StyledSmallHeading t={name} />
         <h4>{title}</h4>
       </div>
       <StyledPara>
-        {desc}
+        {desc.desc}
         <StyledCloseBtn onClick={handleClick}>
           Back to Directors Page
         </StyledCloseBtn>

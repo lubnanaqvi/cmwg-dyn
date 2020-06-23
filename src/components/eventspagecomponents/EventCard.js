@@ -1,9 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import StyledSmallHeading from "../utils/StyledSmallHeading"
-import { Link } from "gatsby"
 const EventCard = ({ event }) => {
-  const { cardId, name, details, ww, link, pic, linktext } = event
+  const { cardId, name, details, whenAndWhere, link, pic, linktext } = event
   const StyledCard = styled.div`
     background-image: linear-gradient(#383838, #434343);
     color: white;
@@ -26,14 +25,10 @@ const EventCard = ({ event }) => {
       color: inherit;
     }
   `
-  const StyledPic = styled.div`
+  const StyledPic = styled.img`
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
-    background-image: url(${require(`../../images/${pic}`)});
-    height: 232px;
     width: 200px;
-    background-size: cover;
-    background-positon: center;
     margin: 2% auto;
     @media (max-width: 750px) {
       grid-column: 1 / span 1;
@@ -80,9 +75,9 @@ const EventCard = ({ event }) => {
       margin: 0 auto;
     }
   `
-  const d = details.split("\n").map((p, i) => {
+  const d = details.details.split("\\n").map((p, i) => {
     let parsed_desc = p
-    //check if it is a link
+    // check if it is a link
     if (p.indexOf("<a") !== -1) {
       const start = p.indexOf("'>") + 2
       const stop = p.indexOf("</a>")
@@ -99,8 +94,8 @@ const EventCard = ({ event }) => {
     <StyledCard id={cardId}>
       <StyledSmallHeading t={name} />
       <StyledDiv>
-        <StyledPic />
-        <StyledWW>{ww}</StyledWW>
+        <StyledPic src={pic.file.url || ""} alt="" />
+        <StyledWW>{whenAndWhere}</StyledWW>
         <StyledPara>
           {d}
           <StyledCTA href={link}>{linktext || "Register"}</StyledCTA>
